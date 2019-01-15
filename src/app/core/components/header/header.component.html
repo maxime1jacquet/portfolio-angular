@@ -1,0 +1,22 @@
+<header 
+  class="header"
+>
+  <ul (click)='openMenu()'>
+    <li routerLink="/work" class='header__link'>Work</li>
+    <li>/</li>
+    <li routerLink="/about" class='header__link'>About</li>
+    <li>/</li>
+    <li routerLink="/contact" class='header__link'>Contact</li>
+  </ul>
+</header>
+
+<button 
+  class="burger hamburger hamburger--spin" 
+  type="button" 
+  (click)='openMenu()'
+  [class.is-active]="isMenuOpen"
+>
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>

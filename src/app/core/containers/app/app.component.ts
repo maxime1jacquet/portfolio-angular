@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio-angular';
+
+  public isMenuOpen:boolean = false;
+
+  constructor(
+  ) { }
+
+  ngOnInit() {
+  }
+
+  public openMenu(bol:boolean):void{
+    this.isMenuOpen = bol;
+  }
 }

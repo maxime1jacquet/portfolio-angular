@@ -1,0 +1,47 @@
+<section class="about" [class.loaded]='loaded'>
+  
+  <div class="about__parcours" [class.show]='idOpenExp'>
+    <h2>
+      developer web chez amalgame,<br>
+      & étudiant licence pro Créaweb à l'IUT de Lens.
+    </h2>
+    <h2>
+      DUT métiers du multimédia et de l'internet,<br>
+      à l'IUT de Lens.
+    </h2>
+    <h2>
+      BAC scientifique,<br>
+      mention bien au lycée beaupré à Haubourdin.
+    </h2>
+  </div>
+  
+  <button class="about__button" (click)='openExp()'>
+    <span *ngIf='idOpenExp'>-</span>
+    <span *ngIf='!idOpenExp'>+</span>
+    d'expériences
+  </button>
+
+  <img class='about__img' src="/assets/imgs/profil.jpg" alt="Maxime Jacquet">
+
+  <div class="about__skills">
+    <skill-svg id="1"></skill-svg>
+    <skill-svg id="2"></skill-svg>
+    <skill-svg id="3"></skill-svg>
+    <skill-svg id="4"></skill-svg>
+    <skill-svg id="5"></skill-svg>
+    <skill-svg id="6"></skill-svg>
+    <skill-svg id="7"></skill-svg>
+    <skill-svg id="8"></skill-svg>
+  </div>
+  
+  <div class="about__presentation">
+    <div class="about__texte">
+      Grâce à mon parcours, je suis devenu developer front-end. Je suis passionné par mon métier, en effet j'apprend en autodidacte tous les jours de nouvelles technologie et de nouvelle méthodes.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id tempor tortor. Sed non turpis sodales, tristique augue eu, fermentum elit. Ut suscipit leo non vestibulum ultricies. In facilisis iaculis erat, vel aliquam diam cursus vel. Vestibulum ut tempus nulla. Quisque bibendum sed nisi vitae pharetra. Nunc vitae est purus. Nam tellus leo, imperdiet vel eleifend quis, lobortis non augue. Ut non pulvinar orci. Quisque lectus nisl, efficitur at nisl eget, ornare viverra augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean mattis iaculis consequat. Donec vitae lacus congue, dignissim lorem at, vulputate est. In nulla mauris, pulvinar ut urna in, scelerisque lobortis nibh. Fusce nisl diam, dignissim et orci non, semper ornare sem.
+      Aliquam mollis urna ut scelerisque molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin dapibus mattis erat eget malesuada. In a risus mauris. Nullam pellentesque neque dolor, et tempus diam hendrerit vitae. Suspendisse vitae aliquam metus. Aenean quis hendrerit dui.
+    </div>
+  </div>
+
+</section>
+
+

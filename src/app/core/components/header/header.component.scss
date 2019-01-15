@@ -1,0 +1,55 @@
+@import "~src/assets/stylesheets/variables";
+@import "~src/assets/stylesheets/components/hamburger";
+
+.header{
+  background-color: $white;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: $z-nav;
+
+  ul{
+    align-items: center;
+    display: flex;
+    height: 220px;
+    justify-content: center; 
+    list-style:none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    color:$black;
+    font-size: 300;
+    font-size: 45px;
+    line-height: 50px;
+    padding:10px 10px;
+    width: auto;
+
+    &.header__link{
+      outline: none;
+      transition: all 150ms ease-out;
+  
+      &:hover{
+        cursor: pointer;
+        color:$pomegranate;
+      }
+    }
+  }
+
+}
+
+.burger{
+  left: $marge-menu;
+  outline: none;
+  position: fixed;
+  top: $marge-menu;
+  z-index: $z-nav-btn;
+
+  @media screen and(max-width:#{$breakpoint}) {
+    left: $marge-menu-small;
+    top: $marge-menu-small;
+  }
+}

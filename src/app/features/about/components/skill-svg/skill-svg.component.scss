@@ -1,0 +1,14 @@
+@import "~src/assets/stylesheets/variables";
+
+.skill-svg{
+  margin-top: $marge;
+  margin-right: $marge;
+  height: 50px;
+  width: auto;
+
+  svg{
+    height: 50px;
+    width: auto;
+    fill:$white;
+  }
+}

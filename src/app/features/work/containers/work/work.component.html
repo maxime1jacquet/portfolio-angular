@@ -1,0 +1,24 @@
+<section class="work">
+  <div 
+    class     = "work__container swiper-container"
+    [swiper]  = "config" 
+    [(index)] = "index" 
+    *ngIf     = 'works'
+  >
+    <div class="work__content swiper-wrapper">
+
+      <div 
+        class='work__item swiper-slide' 
+        *ngFor  = "let work of works[0]"
+        >
+        <app-slide
+          [title]='work.title'
+          [src]='"/assets/imgs/work/"+work.slug+"/"+work.image'
+        ></app-slide>
+      </div>
+
+    </div>
+    <button class='work__prev button-prev'><</button>
+    <button class='work__next button-next'>></button>
+  </div>
+</section>

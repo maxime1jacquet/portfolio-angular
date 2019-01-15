@@ -1,0 +1,31 @@
+@import "~src/assets/stylesheets/variables";
+
+.app{
+  background-color: $black;
+  left: $marge-menu;
+  min-height:calc(100% - 2*#{$marge-menu});
+  padding:50px $marge $marge;
+  position: absolute;
+  top: $marge-menu;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: calc(100% - 2*#{$marge-menu});
+  z-index: $z-body;
+  
+  @media screen and(max-width:#{$breakpoint}) {
+    left: $marge-menu-small;
+    min-height:calc(100% - 2*#{$marge-menu-small});
+    top: $marge-menu-small;
+    width: calc(100% - 2*#{$marge-menu-small});
+  }
+
+  &.open{
+    position: fixed;
+    top: 200px;
+    transform: scale(0.9);
+  }
+
+  &__content{
+    margin:0 auto;
+    max-width: $max-width;
+  }
+}
