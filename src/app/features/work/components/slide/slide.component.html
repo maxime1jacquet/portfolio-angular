@@ -1,4 +1,17 @@
-<div class="slide">
-  <img class="slide__img" [src]='src'>
-  <h2 class="slide__title">{{title}}</h2>
+<div class="slide" routerLink="/about">
+
+  <img class="slide__img" [src]='src' *ngIf='src'>
+
+  <h2 class="slide__title" *ngIf='title'>{{title}}</h2>
+
+  <div class="slide__date" *ngIf='date'>
+    <span>{{dateSplit[0]}}</span>
+    <div></div>
+    <span>{{dateSplit[1]}}</span>
+  </div>
+
+  <div class="slide__text" *ngIf='text'>
+    {{text}}
+  </div>
+  
 </div>

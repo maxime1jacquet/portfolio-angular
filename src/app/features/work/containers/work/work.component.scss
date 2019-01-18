@@ -2,21 +2,40 @@
 @import '~swiper/dist/css/swiper.min.css';
 
 .work{
+  $root : &;
   bottom: 0;
-  height: 75%;
+  height: 75vh;
   left: 0;
   position: absolute;
+  right: 0;
   width: 100%;
+
+  &.loaded{
+    #{$root}__item{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+    #{$root}__prev, #{$root}__next{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
 
   &__container{
     height: 100%;
   }
 
   &__content{
-  }
 
+  }
+  
   &__item{
     width: auto;
+
+    opacity: 0;
+    transform: translateX(- #{$marge});
+    transition: all 300ms ease-in-out;
+    transition-delay: 200ms;
   }
 
   &__prev, &__next{
@@ -39,6 +58,11 @@
       transform: scale(1.1);
       z-index: $z-slide + 1;
     }
+
+    opacity: 0;
+    transform: translateX(- #{$marge});
+    transition: all 300ms ease-in-out;
+    transition-delay: 400ms;
   }
 
   &__prev{

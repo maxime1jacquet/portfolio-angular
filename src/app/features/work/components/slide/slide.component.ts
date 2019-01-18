@@ -7,12 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SlideComponent implements OnInit {
 
-  @Input() title : string;
-  @Input() src : string;
+  @Input() date      : string;
+  @Input() dateSplit : Array<string>;
+  @Input() src       : string;
+  @Input() text      : string;
+  @Input() title     : string;
 
   constructor() { }
 
   ngOnInit() {
+    if(this.date){
+      this.dateSplit = this.date.split('/');
+    }
   }
 
 }

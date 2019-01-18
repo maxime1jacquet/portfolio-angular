@@ -1,4 +1,4 @@
-<section class="work">
+<section class="work" [class.loaded]='loaded'>
   <div 
     class     = "work__container swiper-container"
     [swiper]  = "config" 
@@ -9,11 +9,13 @@
 
       <div 
         class='work__item swiper-slide' 
-        *ngFor  = "let work of works[0]"
-        >
+        *ngFor  = "let work of works[0];let i = index;"
+      >
         <app-slide
           [title]='work.title'
           [src]='"/assets/imgs/work/"+work.slug+"/"+work.image'
+          [date]='work.date'
+          [text]='work.text'
         ></app-slide>
       </div>
 

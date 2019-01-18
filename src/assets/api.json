@@ -5,6 +5,8 @@
       "slug": "bookify",
       "title": "Bookify",
       "image": "2.png",
+      "date": "01/2019",
+      "text": "Lors d'un hackaton à l'ESTIAM, nous devions réaliser une marketplace du livre d'occasion.",
       "porfolio": [
         {
           "type": "texte",
@@ -33,8 +35,10 @@
     {
       "color": "bleu",
       "slug": "roquette-frere",
-      "title": "roquette frère",
+      "title": "Roquette Frère",
       "image": "1.jpg",
+      "date": "12/2018",
+      "text": "En entreprise, je participe à la réalisation de la partie front-end du site Roquette frère.",
       "porfolio": [
         {
           "type": "texte",
@@ -59,8 +63,10 @@
     {
       "color": "orange",
       "slug": "jukesound",
-      "title": "jukesound",
+      "title": "Jukesound",
       "image": "1.jpg",
+      "date": "05/2018",
+      "text": "Mon projet tutoré de Licence Pro consiste à réaliser un site vitrine présentant des jukeboxs mp3 au style rétro.",
       "porfolio": [
         {
           "type": "texte",
@@ -84,8 +90,10 @@
     {
       "color": "orange",
       "slug": "auto-ecole-laurent",
-      "title": "auto-école laurent",
+      "title": "Auto-école Laurent",
       "image": "1.png",
+      "date": "04/2018",
+      "text": "Pour une nouvelle auto-école j'ai réalisé un plan de communication contenant logo, carte de visite et site internet.",
       "porfolio": [
         {
           "type": "texte",
@@ -109,8 +117,10 @@
     {
       "color": "bleu",
       "slug": "threejs-experiment",
-      "title": "threejs experiment",
+      "title": "ThreeJS Experiment",
       "image": "1.jpg",
+      "date": "01/2018",
+      "text": "Pour apprendre et par curiosité j'ai décidé de créer ma première expérience en javascript avec la librairie : Three.js.",
       "porfolio": [
         {
           "type": "texte",
@@ -130,8 +140,10 @@
     {
       "color": "vert",
       "slug": "agence-web-ariane",
-      "title": "agence web ariane",
+      "title": "Agence web Ariane",
       "image": "1.png",
+      "date": "11/2017",
+      "text": "En groupe de 6, nous avons crée un thème WordPress pour la réalisation d’un site d’agence web.",
       "porfolio": [
         {
           "type": "texte",
@@ -167,8 +179,10 @@
     {
       "color": "noir",
       "slug": "refonte-graphique-edt",
-      "title": "refonte graphique EDT",
+      "title": "Refonte graphique EDT",
       "image": "1.jpg",
+      "date": "05/2017",
+      "text": "Pour notre projet de 2ème année de DUT MMI, nous avons fait une refonte graphique du site de l’emploi du temps de l’IUT de Lens.",
       "porfolio": [
         {
           "type": "texte",
@@ -194,6 +208,8 @@
       "slug": "court-metrage-carlzone",
       "title": "court métrage carlzone",
       "image": "1.jpg",
+      "date": "03/2017",
+      "text": "Avec mon groupe, nous avons réalisé un court-métrage de 10min.",
       "porfolio": [
         {
           "type": "texte",

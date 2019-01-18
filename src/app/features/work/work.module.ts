@@ -20,7 +20,6 @@ import * as fromContainers from './containers';
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto',
-  loop: true,
   navigation: {
     nextEl: '.button-next',
     prevEl: '.button-prev',
@@ -28,6 +27,10 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   keyboard: {
     enabled: true,
     onlyInViewport: false,
+  },
+  // mousewheel: true,
+  mousewheel: {
+    sensitivity: 100,
   },
 };
 
