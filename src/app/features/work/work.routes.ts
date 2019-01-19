@@ -8,12 +8,12 @@ const routes: Routes = [
   {
     path: '',
     component: fromContainers.WorkComponent,
-    // children: [
-    //   {
-    //     path: 'peoples',
-    //     component: fromContainers.PeoplesComponent
-    //   },
-		// ]
+    children: [
+      {
+        path: ':id',
+        component: fromContainers.SingleComponent
+      },
+		]
   },
 
 ];

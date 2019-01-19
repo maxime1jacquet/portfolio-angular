@@ -12,6 +12,7 @@ export class SlideComponent implements OnInit {
   @Input() src       : string;
   @Input() text      : string;
   @Input() title     : string;
+  @Input() slug      : string;
 
   constructor() { }
 

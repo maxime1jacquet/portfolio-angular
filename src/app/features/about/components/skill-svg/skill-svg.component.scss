@@ -11,4 +11,13 @@
     width: auto;
     fill:$pomegranate;
   }
+
+  @media screen and(max-width:#{$breakpoint}) {
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+    svg{
+      height: 30px;
+    }
+  }
 }

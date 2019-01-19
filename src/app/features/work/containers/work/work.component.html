@@ -12,10 +12,11 @@
         *ngFor  = "let work of works[0];let i = index;"
       >
         <app-slide
-          [title]='work.title'
-          [src]='"/assets/imgs/work/"+work.slug+"/"+work.image'
-          [date]='work.date'
-          [text]='work.text'
+          [title] = 'work.title'
+          [slug]  = 'work.slug'
+          [src]   = '"/assets/imgs/work/"+work.slug+"/"+work.image'
+          [date]  = 'work.date'
+          [text]  = 'work.text'
         ></app-slide>
       </div>
 
@@ -24,3 +25,5 @@
     <button class='work__next button-next'>></button>
   </div>
 </section>
+
+<router-outlet></router-outlet>

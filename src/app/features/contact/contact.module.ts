@@ -5,8 +5,7 @@ import { RouterModule }  from '@angular/router';
 // import { StoreModule }   from '@ngrx/store';
 // import { EffectsModule } from '@ngrx/effects';
 
-
-import { HomeRoutingModule } from './home.routes';
+import { ContactRoutingModule } from './contact.routes';
 
 // import { reducers, effects } from './store';
 
@@ -19,7 +18,7 @@ import * as fromContainers from './containers';
     CommonModule,
     FormsModule,
     RouterModule,
-    HomeRoutingModule,
+    ContactRoutingModule,
     // StoreModule.forFeature('maxime', reducers),
     // EffectsModule.forFeature(effects),
   ],
@@ -31,4 +30,4 @@ import * as fromContainers from './containers';
   //   ...fromServices.services
   // ]
 })
-export class HomeModule { }
+export class ContactModule { }

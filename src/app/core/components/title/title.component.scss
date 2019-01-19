@@ -6,7 +6,16 @@
     color:$white;
   }
   h2{
-    font-size: 24px;
+    font-size: 22px;
     color:$pomegranate;
+  }
+
+  @media screen and(max-width:#{$breakpoint}) {
+    h1{
+      font-size: 22px;
+    }
+    h2{
+      font-size: 15px;
+    }
   }
 }

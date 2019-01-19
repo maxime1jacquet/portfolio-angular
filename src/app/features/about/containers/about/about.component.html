@@ -15,13 +15,15 @@
     </h2>
   </div>
   
-  <button class="about__button" (click)='openExp()'>
-    <span *ngIf='idOpenExp'>-</span>
-    <span *ngIf='!idOpenExp'>+</span>
-    d'expériences
-  </button>
+  <div>
+    <button class="about__button" (click)='openExp()'>
+      <span *ngIf='idOpenExp'>-</span>
+      <span *ngIf='!idOpenExp'>+</span>
+      d'expériences
+    </button>
+  </div>
 
-  <img class='about__img' src="/assets/imgs/profil.jpg" alt="Maxime Jacquet">
+  <img tabindex='0' class='about__img' src="/assets/imgs/profil.jpg" alt="Maxime Jacquet">
 
   <div class="about__skills">
     <skill-svg id="1"></skill-svg>

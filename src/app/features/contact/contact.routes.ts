@@ -7,7 +7,7 @@ import * as fromContainers from './containers';
 const routes: Routes = [
   {
     path: '',
-    component: fromContainers.HomeComponent,
+    component: fromContainers.ContactComponent,
     // children: [
     //   {
     //     path: 'peoples',
@@ -22,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomeRoutingModule { }
+export class ContactRoutingModule { }

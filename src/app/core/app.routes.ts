@@ -15,10 +15,10 @@ const routes: Routes = [
     path: 'about',
     loadChildren: '../features/about/about.module#AboutModule',
   },
-  // { 
-  //   path: 'contact',
-  //   loadChildren: '../features/contact/contact.module#ContactModule',
-  // },
+  { 
+    path: 'contact',
+    loadChildren: '../features/contact/contact.module#ContactModule',
+  },
   { 
     path: '**',
     redirectTo: 'work'

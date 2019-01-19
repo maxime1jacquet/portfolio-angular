@@ -2,13 +2,22 @@
 @import '~swiper/dist/css/swiper.min.css';
 
 .work{
+  // TODO REMOVE ABSOLUTE POSITION
+  
   $root : &;
   bottom: 0;
   height: 75vh;
   left: 0;
   position: absolute;
   right: 0;
+
   width: 100%;
+  
+  @media screen and(max-width:#{$breakpoint}) {
+    height: 65vh;
+    font-size: 14px;
+    line-height: 20px;
+  }
 
   &.loaded{
     #{$root}__item{
@@ -54,16 +63,24 @@
     width: $size-btn;
     z-index: $z-slide;
 
-    &:hover{
-      transform: scale(1.1);
-      z-index: $z-slide + 1;
+    @media screen and(max-width:#{$breakpoint}) {
+      $size-btn : 50px;
+      font-size: 20px;
+      height: $size-btn;
+      left: $size-btn;
+      width: $size-btn;
     }
 
     opacity: 0;
-    transform: translateX(- #{$marge});
+    transform: translateX(- #{$marge}) scale(1);
     transition: all 300ms ease-in-out;
     transition-delay: 400ms;
+
+    &:hover, &:focus{
+      // border:1px solid $black;
+    }
   }
+  
 
   &__prev{
     background-color: $denim;
