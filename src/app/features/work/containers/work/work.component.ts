@@ -26,10 +26,10 @@ export class WorkComponent implements OnInit {
     this.getData();
   }
 
-  public loadedPage():void{
+  private loadedPage():void{
     setTimeout(() => {
       this.loaded = true;
-    }, 200);
+    }, 100);
   }
 
   private getData():void{

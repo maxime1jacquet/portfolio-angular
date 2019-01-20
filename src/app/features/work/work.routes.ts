@@ -7,15 +7,12 @@ import * as fromContainers from './containers';
 const routes: Routes = [
   {
     path: '',
-    component: fromContainers.WorkComponent,
-    children: [
-      {
-        path: ':id',
-        component: fromContainers.SingleComponent
-      },
-		]
+    component: fromContainers.WorkComponent
   },
-
+  {
+    path: ':id',
+    component: fromContainers.SingleComponent
+  },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Router }          from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,12 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() isMenuOpen:boolean;
+  @Input() isMenuOpen  : boolean;
   @Output() onOpenMenu : EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(
+    public router : Router
+  ) { }
 
   ngOnInit() {
   }
@@ -18,6 +21,10 @@ export class HeaderComponent implements OnInit {
   public openMenu():void{
     this.isMenuOpen = !this.isMenuOpen;
     this.onOpenMenu.emit(this.isMenuOpen);
+  }
+
+  public loadPage(route:string) {
+    this.router.navigate([route]);
   }
 
 }

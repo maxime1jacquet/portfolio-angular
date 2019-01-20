@@ -1,6 +1,9 @@
 @import "~src/assets/stylesheets/variables";
 
 .title{
+  margin:0 auto;
+  max-width: $max-width;
+
   h1{
     font-size: 30px;
     color:$white;

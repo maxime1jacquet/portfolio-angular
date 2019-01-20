@@ -2,7 +2,7 @@ $height-nav: 50px;
 $marge: 15px;
 $max-width: 1200px;
 $marge-menu: 10px;
-$marge-menu-small: 4px;
+$marge-menu-small: 0px;
 
 $breakpoint : 1024px;
 
@@ -12,12 +12,18 @@ $z-body: 0;
 $z-slide: 1;
 
 // // BLACK
-$black : #FFF;
+// $black : #FFF;
 $black : #fcfafa;
 // $white : #000;
 $white : #1d31a1;
 $pomegranate: #2172F3;
 $denim: #0F55C5;
+
+//ROUGE
+// $black : #fcfafa;
+// $white : #F44336;
+// $pomegranate: #2172F3;
+// $denim: #0F55C5;
 
 // BLEU
 // $white : #212121;

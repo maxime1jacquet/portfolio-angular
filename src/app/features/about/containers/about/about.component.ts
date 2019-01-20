@@ -20,10 +20,10 @@ export class AboutComponent implements OnInit {
     this.idOpenExp = !this.idOpenExp;
   }
   
-  public loadedPage():void{
+  private loadedPage():void{
     setTimeout(() => {
       this.loaded = true;
-    }, 200);
+    }, 0);
   }
 
 }

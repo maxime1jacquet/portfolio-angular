@@ -5,7 +5,7 @@
   (onOpenMenu)="openMenu($event)"
   ></app-header>
   
-  <main class='app' [class.open]='isMenuOpen'>
+  <main class='app' [class.open]='isMenuOpen' (mouseenter)="closeMenu()">
     <div class="app__content">
       <app-title></app-title>
       <router-outlet></router-outlet>

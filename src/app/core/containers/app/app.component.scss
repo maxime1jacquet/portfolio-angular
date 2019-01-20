@@ -2,6 +2,7 @@
 
 .app{
   background-color: $black;
+  display: flex;
   left: $marge-menu;
   min-height:calc(100% - 2*#{$marge-menu});
   padding:50px $marge $marge;
@@ -29,7 +30,9 @@
   }
 
   &__content{
-    margin:0 auto;
-    max-width: $max-width;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    width: 100%;
   }
 }

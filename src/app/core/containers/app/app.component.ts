@@ -18,4 +18,8 @@ export class AppComponent {
   public openMenu(bol:boolean):void{
     this.isMenuOpen = bol;
   }
+  
+  public closeMenu():void{
+    this.isMenuOpen = false;
+  }
 }

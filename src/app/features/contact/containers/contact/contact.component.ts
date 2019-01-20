@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  public loaded:boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+    this.loadedPage();
+  }
+
+  private loadedPage():void{
+    setTimeout(() => {
+      this.loaded = true;
+    }, 0);
   }
 
 }

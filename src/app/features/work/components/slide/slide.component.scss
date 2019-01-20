@@ -37,21 +37,9 @@
   }
 
   @media screen and(max-width:#{$breakpoint}) {
-    width: 98vw;
+    box-shadow: inset 0 0 2000px 2000px rgba($pomegranate, 0.9);
+    width: 100%;
     max-width: 400px;
-
-    &:hover, &:focus{
-      box-shadow: inset 0 0 2000px 2000px rgba($black, 0.9);
-      #{$root}__title{
-        color:$white;
-      }
-      #{$root}__date{
-        color:$white;
-        div{
-          border-bottom: 1px solid $white;
-        }
-      }
-    }
   }
   
   &__img{
@@ -75,6 +63,7 @@
     transition: all 300ms ease-out;
 
     @media screen and(max-width:#{$breakpoint}) {
+      color:$black;
       padding:$padding-small;
       transform:translateY(- #{$marge});
       font-size: 22px;
@@ -96,9 +85,11 @@
     }
 
     @media screen and(max-width:#{$breakpoint}) {
+      color:$black;
       padding:$padding-small;
+
       div{
-        border-bottom: 1px solid $white;
+        border-bottom: 1px solid $black;
         width: 70px;
       }
     }
@@ -116,7 +107,7 @@
     @media screen and(max-width:#{$breakpoint}) {
       padding:$padding-small;
       height: 60px;
-      color:$white;
+      color:$black;
       opacity: 1;
       font-size: 14px;
       line-height: 20px;

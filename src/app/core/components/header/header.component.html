@@ -11,11 +11,11 @@
 
 <header class="header">
   <ul (click)='openMenu()'>
-    <li routerLink="/work" class='header__link'>Portfolio</li>
+    <li  (mouseenter)="loadPage('/work')" router-link='/work' class='header__link'>Portfolio</li>
     <li class='limit'>/</li>
-    <li routerLink="/about" class='header__link'>À propos</li>
+    <li  (mouseenter)="loadPage('/about')" router-link='/about' class='header__link'>À propos</li>
     <li class='limit'>/</li>
-    <li routerLink="/contact" class='header__link'>Contact</li>
+    <li  (mouseenter)="loadPage('/contact')" router-link='/contact' class='header__link'>Contact</li>
   </ul>
 </header>
 
