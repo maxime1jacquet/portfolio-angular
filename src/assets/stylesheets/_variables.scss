@@ -1,38 +1,22 @@
-$height-nav: 50px;
-$marge: 15px;
-$max-width: 1200px;
-$marge-menu: 10px;
-$marge-menu-small: 0px;
+$height-nav:       50px;
+$marge:            15px;
+$max-width:        1100px;
 
-$breakpoint : 1024px;
+$marge-menu:       30px;
+$marge-menu-small: 10px;
 
-$z-nav: -1;
-$z-nav-btn: 1;
-$z-body: 0;
-$z-slide: 1;
+$breakpoint:       1024px;
 
-// // BLACK
-// $black : #FFF;
-$black : #fcfafa;
-// $white : #000;
-$white : #1d31a1;
-$pomegranate: #2172F3;
-$denim: #0F55C5;
+$z-title:          100;
+$z-nav:            -1;
+$z-nav-btn:        1;
+$z-body:           0;
+$z-slide:          10;
 
-//ROUGE
-// $black : #fcfafa;
-// $white : #F44336;
-// $pomegranate: #2172F3;
-// $denim: #0F55C5;
-
-// BLEU
-// $white : #212121;
-// $black : #03A9F4;
-// $pomegranate: #00517c;
-// $denim: #0F55C5;
-
-// //JAUNE
-// $white : #FFD800;
-// $black : #000216;
-// $pomegranate: #FFD800;
-// $denim: #ffae00;
+// COLORS
+$black:            #fcfafa;
+$grey:             #e5e4ef;
+$pomegranate:      #2172F3;
+$denim:            #1048e6;
+$white:            #1d31a1;
+$noir:             #000;

@@ -1,8 +1,9 @@
-@import "~src/assets/stylesheets/variables";
-@import "~src/assets/stylesheets/components/hamburger";
+@import "../../../../assets/stylesheets/variables";
+@import "../../../../assets/stylesheets/components/hamburger";
 
 .header{
   background-color: $white;
+  background: linear-gradient(to bottom right, #{$white}, #{darken($white,10%)});
   height: 100vh;
   left: 0;
   padding: $marge;
@@ -23,7 +24,8 @@
 
     @media screen and(max-width:#{$breakpoint}) {
       flex-direction: column;
-      height: 180px;
+      align-items: flex-start;
+      height: 300px;
       .limit{
         display: none;
       }
@@ -39,20 +41,19 @@
 
     &.header__link{
       outline: none;
-      transition: all 150ms ease-out;
+      transition: all 200ms ease-out;
   
-      &:hover, &:focus{
+      &:hover, &:focus, &.active{
         cursor: pointer;
-        color:$pomegranate;
+        text-decoration: underline;
       }
     }
 
     @media screen and(max-width:#{$breakpoint}) {
-      font-size: 20px;
-      line-height: 22px;
+      font-size: 24px;
+      line-height: 30px;
     }
   }
-
 }
 
 .burger{
@@ -67,16 +68,16 @@
     top: 0;
     left: 0;
     content:'';
-    background-color: $white;
+    background-color: $pomegranate;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    opacity: 1;
     transition: all 150ms ease-out;
   }
 
   &:hover, &:focus {
     &::before{
-      opacity: 0.15;
+      background-color: $denim;
     }
   }
   

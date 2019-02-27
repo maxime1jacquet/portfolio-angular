@@ -1,7 +1,7 @@
 import { NgModule }             from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import * as fromComponents from './components';
+// import * as fromComponents from './components';
 import * as fromContainers from './containers';
 
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
     component: fromContainers.WorkComponent
   },
   {
-    path: ':id',
+    path: ':slug',
     component: fromContainers.SingleComponent
   },
 ];

@@ -1,24 +1,32 @@
-@import "~src/assets/stylesheets/variables";
+@import "../../../../assets/stylesheets/variables";
 
 .title{
   margin:0 auto;
   max-width: $max-width;
+  position: relative;
+  z-index: $z-title;
 
   h1{
-    font-size: 30px;
-    color:$white;
-  }
-  h2{
-    font-size: 22px;
-    color:$pomegranate;
-  }
+    color:$denim;
+    font-size: 35px;
+    display: inline-block;
+    width: auto;
+    margin-bottom: $marge;
+    position: relative;
+    text-decoration: underline;
 
-  @media screen and(max-width:#{$breakpoint}) {
-    h1{
-      font-size: 22px;
+    @media screen and(max-width:#{$breakpoint}) {
+      font-size: 30px;
+      margin-top: 10px;
     }
-    h2{
-      font-size: 15px;
+  }
+  
+  h2{
+    color:$pomegranate;
+    font-size: 22px;
+    min-height:60px;
+    @media screen and(max-width:#{$breakpoint}) {
+      font-size: 16px;
     }
   }
 }

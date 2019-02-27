@@ -11,6 +11,10 @@ html {
   box-sizing: inherit;
 }
 
+body{
+  overflow:hidden;
+}
+
 body, h1, h2, h3, h4, h5, h6, p, ol, ul, input, select, button {
   margin: 0;
   padding: 0;
@@ -25,6 +29,11 @@ img {
 }
 
 /*CUSTOM TAG*/
+app-main{
+  flex:1;
+  display: flex;
+}
+
 app-work{
   flex:1;
   display: flex;

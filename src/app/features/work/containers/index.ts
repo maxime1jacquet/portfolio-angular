@@ -3,7 +3,7 @@ import { SingleComponent } from './single/single.component';
 
 export const components: any[] = [
   WorkComponent,
-  SingleComponent
+  SingleComponent,
 ];
 
 export * from './work/work.component';

@@ -1,23 +1,22 @@
-@import "~src/assets/stylesheets/variables";
+@import "../../../../../assets/stylesheets/variables";
 
 .skill-svg{
   margin-top: $marge;
   margin-right: $marge;
-  height: 50px;
   width: auto;
 
   svg{
-    height: 50px;
+    fill:$denim;
+    height: 53px;
     width: auto;
-    fill:$pomegranate;
   }
 
   @media screen and(max-width:#{$breakpoint}) {
-    height: 30px;
-    margin-top: 10px;
     margin-right: 10px;
+    margin-top: 10px;
+
     svg{
-      height: 30px;
+      height: 32px;
     }
   }
 }

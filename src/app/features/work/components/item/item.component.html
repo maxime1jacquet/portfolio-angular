@@ -1,0 +1,20 @@
+<a
+  class="item"
+  tabindex="0"
+  (click)="routerLink('/work/' + slug)"
+  (keyup.enter)="routerLink('/work/' + slug)"
+  [class.current]="current"
+  [attr.aria-label]="'Voir le projet ' + title"
+>
+  <div class="item__tag" *ngIf="date">
+    {{tags}}
+  </div>
+
+  <h2 class="item__title" *ngIf="title">{{ title }}</h2>
+  <div class="item__date" *ngIf="date">
+    <span>{{ dateSplit[0] }}</span>
+    <div></div>
+    <span>{{ dateSplit[1] }}</span>
+  </div>
+
+</a>

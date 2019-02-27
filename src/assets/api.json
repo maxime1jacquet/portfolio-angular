@@ -1,42 +1,10 @@
 {
   "0": [
     {
-      "color": "vert",
-      "slug": "bookify",
-      "title": "Bookify",
-      "image": "2.png",
-      "date": "01/2019",
-      "text": "Lors d'un hackaton à l'ESTIAM, nous devions réaliser une marketplace du livre d'occasion.",
-      "porfolio": [
-        {
-          "type": "texte",
-          "texte": "Lors d'un hackaton à l'ESTIAM, nous devions réaliser une marketplace du livre d'occasion. En équipe de 5 nous avons réalisé en 4 jours Bookify, une application VueJs qui permet d'acheter et vendre des livres d'occasions dans sa région.Pour réaliser ce marketplace nous avons utilisé pour le front : le framework Javascrit VueJS avec des librairies complémentaires comme VueRouter, Vuex, VueRessourse. Et, pour le back-end nous avons créé des APIs avec Symfony et API plateform. Lors de ce projet j'ai réalisé la partie front-end du site, avec la mise en place du projet et de sa structure."
-        },
-        {
-          "type": "site",
-          "label": "Voir la navigation sur le site",
-          "url": "https://youtu.be/9_AQUmJF2gA"
-        },
-        {
-          "type": "site",
-          "label": "Voir le projet sur GitHub",
-          "url": "https://github.com/maxime1jacquet/bookify"
-        },
-        {
-          "type": "image",
-          "lien": "2.png"
-        },
-        {
-          "type": "image",
-          "lien": "3.png"
-        }
-      ]
-    },
-    {
       "color": "bleu",
       "slug": "roquette-frere",
       "title": "Roquette Frère",
-      "image": "1.jpg",
+      "image": "primary.jpg",
       "date": "12/2018",
       "text": "En entreprise, je participe à la réalisation de la partie front-end du site Roquette frère.",
       "porfolio": [
@@ -61,25 +29,21 @@
       ]
     },
     {
-      "color": "orange",
-      "slug": "jukesound",
-      "title": "Jukesound",
-      "image": "1.jpg",
-      "date": "05/2018",
-      "text": "Mon projet tutoré de Licence Pro consiste à réaliser un site vitrine présentant des jukeboxs mp3 au style rétro.",
+      "color": "bleu",
+      "slug": "threejs-experiment",
+      "title": "ThreeJS Experiment",
+      "image": "primary.jpg",
+      "date": "01/2018",
+      "text": "Pour apprendre et par curiosité j'ai décidé de créer ma première expérience en javascript avec la librairie : Three.js.",
       "porfolio": [
         {
           "type": "texte",
-          "texte": "Mon projet tutoré de Licence Pro consiste à réaliser un site vitrine présentant des jukeboxs mp3 au style rétro."
-        },
-        {
-          "type": "texte",
-          "texte": "Pour ce projet nous avons décidé d’utiliser le Framework Javascrit Vue.js. Cela nous permet d’animer les différents éléments de la page est de travailler sur une nouveau framework."
+          "texte": "Pour apprendre et par curiosité j'ai décidé de créer ma première expérience en javascript avec la librairie : Three.js. Elle consiste à voyager dans le vide de l’espace autour de la terre et du soleil."
         },
         {
           "type": "site",
           "label": "Voir le site",
-          "url": "http://www.jukebox-vintage.fr/jukebox"
+          "url": "https://experiment.maximejacquet.fr/"
         },
         {
           "type": "image",
@@ -91,7 +55,7 @@
       "color": "orange",
       "slug": "auto-ecole-laurent",
       "title": "Auto-école Laurent",
-      "image": "1.png",
+      "image": "primary.jpg",
       "date": "04/2018",
       "text": "Pour une nouvelle auto-école j'ai réalisé un plan de communication contenant logo, carte de visite et site internet.",
       "porfolio": [
@@ -115,33 +79,10 @@
       ]
     },
     {
-      "color": "bleu",
-      "slug": "threejs-experiment",
-      "title": "ThreeJS Experiment",
-      "image": "1.jpg",
-      "date": "01/2018",
-      "text": "Pour apprendre et par curiosité j'ai décidé de créer ma première expérience en javascript avec la librairie : Three.js.",
-      "porfolio": [
-        {
-          "type": "texte",
-          "texte": "Pour apprendre et par curiosité j'ai décidé de créer ma première expérience en javascript avec la librairie : Three.js. Elle consiste à voyager dans le vide de l’espace autour de la terre et du soleil."
-        },
-        {
-          "type": "site",
-          "label": "Voir le site",
-          "url": "https://experiment.maximejacquet.fr/"
-        },
-        {
-          "type": "image",
-          "lien": "1.jpg"
-        }
-      ]
-    },
-    {
       "color": "vert",
       "slug": "agence-web-ariane",
       "title": "Agence web Ariane",
-      "image": "1.png",
+      "image": "primary.jpg",
       "date": "11/2017",
       "text": "En groupe de 6, nous avons crée un thème WordPress pour la réalisation d’un site d’agence web.",
       "porfolio": [
@@ -178,36 +119,9 @@
     },
     {
       "color": "noir",
-      "slug": "refonte-graphique-edt",
-      "title": "Refonte graphique EDT",
-      "image": "1.jpg",
-      "date": "05/2017",
-      "text": "Pour notre projet de 2ème année de DUT MMI, nous avons fait une refonte graphique du site de l’emploi du temps de l’IUT de Lens.",
-      "porfolio": [
-        {
-          "type": "texte",
-          "texte": "Pour notre projet de 2ème année de DUT MMI, nous avons avec Vincent Battez et Patryk Mierzela fait une refonte graphique du site de l’emploi du temps de l’IUT de Lens."
-        },
-        {
-          "type": "site",
-          "label": "Voir le site",
-          "url": "http://gestionedt.emploisdutempssrc.net/"
-        },
-        {
-          "type": "texte",
-          "texte": "Voici un exemple de notre travail avec l’avant-après de la Home Page. En effet, nous avons travaillé en groupe pour rendre l’affichage du site moderne et qu’il soit responsive, afin d’être utilisable sur mobile"
-        },
-        {
-          "type": "image",
-          "lien": "1.jpg"
-        }
-      ]
-    },
-    {
-      "color": "noir",
       "slug": "court-metrage-carlzone",
-      "title": "court métrage carlzone",
-      "image": "1.jpg",
+      "title": "Court-métrage Carlzone",
+      "image": "primary.jpg",
       "date": "03/2017",
       "text": "Avec mon groupe, nous avons réalisé un court-métrage de 10min.",
       "porfolio": [

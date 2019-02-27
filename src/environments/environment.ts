@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  endpoint : 'https://api-projets.maximejacquet.fr'
+  // endpoint : 'http://localhost:8080'
 };
 
 /*

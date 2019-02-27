@@ -1,29 +1,17 @@
-<section class="work" [class.loaded]='loaded'>
-  <div 
-    class     = "work__container swiper-container"
-    [swiper]  = "config" 
-    [(index)] = "index" 
-    *ngIf     = 'works'
-  >
-    <div class="work__content swiper-wrapper">
-
-      <div 
-        class='work__item swiper-slide' 
-        *ngFor  = "let work of works[0];let i = index;"
-      >
-        <app-slide
-          [title] = 'work.title'
-          [slug]  = 'work.slug'
-          [src]   = '"/assets/imgs/work/"+work.slug+"/"+work.image'
-          [date]  = 'work.date'
-          [text]  = 'work.text'
-        ></app-slide>
-      </div>
-
+<section class="work" [class.loaded]="loaded">
+  <div class="work__container" *ngIf="works">
+    <div
+      class="work__item"
+      *ngFor="let work of works; let i = index"
+      [style.transition-delay]="i * 200 + 'ms'"
+    >
+      <item
+        [title]="work.title"
+        [slug]="work.slug"
+        [tags]="work.tag"
+        [date]="work.date"
+        [index]="i"
+      ></item>
     </div>
-    <button class='work__prev button-prev'><</button>
-    <button class='work__next button-next'>></button>
   </div>
 </section>
-
-<router-outlet></router-outlet>

@@ -1,16 +1,17 @@
-@import "~src/assets/stylesheets/variables";
+@import "../../../../../assets/stylesheets/variables";
 
 .contact{
   $root : &;
   margin:0 auto;
   max-width: $max-width;
-  
+  position: relative;
+
   &__list{
     align-items: center;
     display: flex;
-    height: 70vh;
     justify-content: center;
     list-style: none;
+    height: 70vh;
     margin: 0;
     padding: 0;
 
@@ -51,35 +52,40 @@
     }
 
     a{
-      color:$white;
+      color:$pomegranate;
       display: inline-block;
       font-size: 22px;
-      padding:10px 0;
+      padding:10px 10px;
+      outline: none;
       text-decoration: none;
+      transition: all 150ms ease-out;
+      border-bottom: 1px solid transparent;
       
       @media screen and(max-width:#{$breakpoint}) {
-        font-size: 18px;
-        padding:20px 0;
+        font-size: 22px;
+        text-decoration: underline;
+        padding:10px 0px;
       }
-      &:hover{
-        color:$pomegranate;
+
+      &:hover, &:focus{
+        color:$white;
+        text-decoration: underline;
       }
     }
 
     &::after{
-      background-color: $white;
+      background-color: $pomegranate;
       content:'';
-      height: 1px;
+      height: 2px;
       margin:0 $marge;
       position: absolute;
       top:25px;
       width: 50px;
       
       @media screen and(max-width:#{$breakpoint}) {
-        top:33px;
-        width: 100px;
+        display: none;
       }
-
     }
   }
+
 }

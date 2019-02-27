@@ -1,17 +1,21 @@
-@import "~src/assets/stylesheets/variables";
+@import "../../../../assets/stylesheets/variables";
 
 .app{
   background-color: $black;
   display: flex;
+  height: calc(100% - 2*#{$marge-menu});
   left: $marge-menu;
   min-height:calc(100% - 2*#{$marge-menu});
+  overflow-y: scroll;
   padding:50px $marge $marge;
   position: absolute;
   top: $marge-menu;
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   width: calc(100% - 2*#{$marge-menu});
   z-index: $z-body;
-  
+
   @media screen and(max-width:#{$breakpoint}) {
     left: $marge-menu-small;
     min-height:calc(100% - 2*#{$marge-menu-small});
@@ -21,11 +25,10 @@
 
   &.open{
     position: fixed;
-    top: 200px;
-    transform: scale(0.9);
+    transform: scale(0.9) translateY(200px);
     
     @media screen and(max-width:#{$breakpoint}) {
-      top: 180px;
+      transform: scale(0.9) translateX(250px) translateY(0px);
     }
   }
 

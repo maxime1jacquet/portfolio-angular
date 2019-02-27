@@ -1,7 +1,7 @@
-import { SlideComponent } from './slide/slide.component';
+import { ItemComponent } from './item/item.component';
 
 export const components: any[] = [
-  SlideComponent,
+  ItemComponent,
 ];
 
-export * from './slide/slide.component';
+export * from './item/item.component';

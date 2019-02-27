@@ -1,3 +1,36 @@
-<p>
-  single works!
-</p>
+<section class="single" *ngIf="work" [class.loaded]="loaded">
+  <h2 class="single__title">{{ work.title }}</h2>
+  <div class="single__date" *ngIf="work.date">
+    <span>{{ dateSplit[0] }}</span>
+    <div></div>
+    <span>{{ dateSplit[1] }}</span>
+  </div>
+
+  <a class="single__close" routerLink="/works" aria-label="fermer le projet">
+    <svg
+      width="357px"
+      height="357px"
+      viewBox="0 0 357 357"
+      style="enable-background:new 0 0 357 357;"
+      xml:space="preserve"
+    >
+      <g>
+        <g id="add">
+          <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z" />
+        </g>
+      </g>
+    </svg>
+  </a>
+
+  <div class="single__content">
+    
+    <div class="single__image">
+      <img [src]="endpoint + '/' + work.slug + '/primary.jpg'" [alt]="work.title" />
+    </div>
+    
+    <div class="single__text">
+      {{work.text}}
+    </div>
+  </div>
+
+</section>

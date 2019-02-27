@@ -1,4 +1,4 @@
-@import "~src/assets/stylesheets/variables";
+@import "../../../assets/stylesheets/variables";
 
 // Settings
 // ==================================================
@@ -7,17 +7,17 @@ $hamburger-padding-y           : 13px !default;
 $hamburger-layer-width         : 20px !default;
 $hamburger-layer-height        : 2px !default;
 $hamburger-layer-spacing       : 5px !default;
-$hamburger-layer-color         : $white !default;
+$hamburger-layer-color         : $black !default;
 $hamburger-layer-border-radius : 4px !default;
 $hamburger-hover-opacity       : 0.7 !default;
 $hamburger-active-layer-color  : $black !default;
-$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+$hamburger-active-hover-opacity: 1 !default;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
 // change the value of $hamburger-hover-filter accordingly.
 $hamburger-hover-use-filter   : false !default;
-$hamburger-hover-filter       : opacity(50%) !default;
+$hamburger-hover-filter       : opacity(100%) !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 // Types (Remove or comment out what you don’t need)
@@ -43,14 +43,14 @@ $hamburger-types: (
   transition-property: opacity, filter;
   transition-timing-function: linear;
 
-  &:hover {
-    @if $hamburger-hover-use-filter == true {
-      filter: $hamburger-hover-filter;
-    }
-    @else {
-      opacity: $hamburger-hover-opacity;
-    }
-  }
+  // &:hover {
+  //   @if $hamburger-hover-use-filter == true {
+  //     filter: $hamburger-hover-filter;
+  //   }
+  //   @else {
+  //     opacity: $hamburger-hover-opacity;
+  //   }
+  // }
 
   &.is-active {
     &:hover {

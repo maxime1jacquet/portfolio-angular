@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta }       from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   public loaded:boolean = false;
+  public txtTmp:string = '';
 
-  constructor() { }
+  constructor(
+    private title: Title,
+    private meta: Meta,
+  ) { }
 
   ngOnInit() {
+    this.title.setTitle('Me contacter →  Maxime Jacquet front end developer');
+    this.meta.addTag({name:'description', content:'front end developer at Yoozly' });
     this.loadedPage();
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta }       from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -7,12 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  
   public idOpenExp:boolean = false;
   public loaded:boolean = false;
 
-  constructor() { }
+  constructor(
+    private title: Title,
+    private meta: Meta,
+  ) { }
 
   ngOnInit() {
+    this.title.setTitle('A propos de moi → Maxime Jacquet front end developer');
+    this.meta.addTag({name:'description', content:'front end developer at Yoozly' });
+
     this.loadedPage();
   }
 
