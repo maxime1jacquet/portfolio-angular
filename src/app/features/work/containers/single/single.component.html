@@ -23,14 +23,10 @@
   </a>
 
   <div class="single__content">
-    
-    <div class="single__image">
-      <img [src]="endpoint + '/' + work.slug + '/primary.jpg'" [alt]="work.title" />
+    <div class="single__tag">
+      {{tag}}
     </div>
-    
-    <div class="single__text">
-      {{work.text}}
-    </div>
+    <portfolio [data]="work.porfolio"></portfolio>
   </div>
 
 </section>

@@ -1,0 +1,17 @@
+<section class="portfolio" *ngIf="data">
+
+  <div class="portfolio__item" *ngFor="let item of data">
+
+    <div class="portfolio__text" *ngIf="item.type == 'texte'" [innerHTML]='item.texte'>
+    </div>
+
+    <div class="portfolio__link" *ngIf="item.type == 'site'">
+      <a [href]="item.url" target="_blank" class='portfolio__button'>{{item.label}}</a>
+    </div>
+
+    <div class="portfolio__image" *ngIf="item.type == 'image'">
+      <img [src]="endpoint+item.lien" alt="">
+    </div>
+
+  </div>
+</section>

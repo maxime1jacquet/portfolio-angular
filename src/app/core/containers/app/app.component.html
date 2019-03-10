@@ -1,11 +1,11 @@
-<div class="body">
+<div class="body" *ngIf="(menuState$ | async) as menuState">
 
   <app-header
-    [isMenuOpen]="isMenuOpen"
-    (onOpenMenu)="openMenu($event)"
+    [isMenuOpen]="menuState.isOpen"
+    (onOpenMenu)="openMenu()"
   ></app-header>
   
-  <main class='app' [class.open]='isMenuOpen' (mouseenter)="closeMenu()">
+  <main class='app' [class.open]='menuState.isOpen' (mouseenter)="closeMenu()">
     <div class="app__content">
       <app-title></app-title>
       <router-outlet #outlet="outlet"></router-outlet>

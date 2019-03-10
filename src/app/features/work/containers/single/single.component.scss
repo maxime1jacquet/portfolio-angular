@@ -1,11 +1,11 @@
-@import "../../../../../assets/stylesheets/variables";
+@import "../../../../../stylesheets/variables";
 
 .single {
   $root: &;
   background-color: $black;
   margin: $marge auto;
   max-width: $max-width;
-  min-height: 75vh;
+  min-height: 70vh;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -73,6 +73,12 @@
         height: 18px;
       }
     }
+  }
+
+  &__tag{
+    margin-top: 30px;
+    color: $pomegranate;
+    text-decoration: underline;
   }
 
   &__title {

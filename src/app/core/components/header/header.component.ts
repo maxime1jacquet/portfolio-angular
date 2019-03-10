@@ -1,30 +1,31 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { Router }          from '@angular/router';
+import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
+import { Store } from "@ngrx/store";
+
+import * as fromStore from "../../store";
+import * as fromModel from "../../models";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
+  @Input() isMenuOpen: boolean;
+  @Output() onOpenMenu: EventEmitter<void> = new EventEmitter<void>();
 
-  @Input() isMenuOpen  : boolean;
-  @Output() onOpenMenu : EventEmitter<boolean> = new EventEmitter<boolean>();
+  constructor(private store: Store<fromModel.AppcoreState>) {}
 
-  constructor(
-    public router : Router
-  ) { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  public openMenu(): void {
+    this.onOpenMenu.emit();
   }
 
-  public openMenu():void{
-    this.isMenuOpen = !this.isMenuOpen;
-    this.onOpenMenu.emit(this.isMenuOpen);
+  public loadPage(route: string) {
+    this.store.dispatch(
+      new fromStore.Go({
+        path: [route]
+      })
+    );
   }
-
-  public loadPage(route:string) {
-    this.router.navigate([route]);
-  }
-
 }

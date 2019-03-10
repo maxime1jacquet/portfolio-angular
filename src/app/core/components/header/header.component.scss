@@ -1,9 +1,13 @@
-@import "../../../../assets/stylesheets/variables";
-@import "../../../../assets/stylesheets/components/hamburger";
+@import "../../../../stylesheets/variables";
+@import "../../../../stylesheets/components/hamburger";
 
-.header{
+.header {
   background-color: $white;
-  background: linear-gradient(to bottom right, #{$white}, #{darken($white,10%)});
+  background: linear-gradient(
+    to bottom right,
+    #{$white},
+    #{darken($white, 10%)}
+  );
   height: 100vh;
   left: 0;
   padding: $marge;
@@ -12,13 +16,13 @@
   width: 100vw;
   z-index: $z-nav;
 
-  ul{
+  ul {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     height: 220px;
-    justify-content: center; 
-    list-style:none;
+    justify-content: center;
+    list-style: none;
     margin: 0;
     padding: 0;
 
@@ -26,24 +30,26 @@
       flex-direction: column;
       align-items: flex-start;
       height: 300px;
-      .limit{
+      .limit {
         display: none;
       }
     }
   }
 
-  li{
-    color:$black;
+  li {
+    color: $black;
     font-size: 45px;
     line-height: 50px;
-    padding:10px 10px;
+    padding: 10px 10px;
     width: auto;
 
-    &.header__link{
+    &.header__link {
       outline: none;
       transition: all 200ms ease-out;
-  
-      &:hover, &:focus, &.active{
+
+      &:hover,
+      &:focus,
+      &.active {
         cursor: pointer;
         text-decoration: underline;
       }
@@ -56,18 +62,18 @@
   }
 }
 
-.burger{
+.burger {
   left: $marge-menu;
   outline: none;
   position: fixed;
   top: $marge-menu;
   z-index: $z-nav-btn;
 
-  &::before{
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
-    content:'';
+    content: "";
     background-color: $pomegranate;
     width: 100%;
     height: 100%;
@@ -75,12 +81,13 @@
     transition: all 150ms ease-out;
   }
 
-  &:hover, &:focus {
-    &::before{
+  &:hover,
+  &:focus {
+    &::before {
       background-color: $denim;
     }
   }
-  
+
   @media screen and(max-width:#{$breakpoint}) {
     left: $marge-menu-small;
     top: $marge-menu-small;

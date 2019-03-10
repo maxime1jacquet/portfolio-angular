@@ -15,6 +15,7 @@ export class SingleComponent implements OnInit {
   public loaded: boolean = false;
   public work: any;
   public dateSplit: Array<string>;
+  public tag: string;
   public endpoint: string = environment.endpoint;
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
@@ -34,6 +35,9 @@ export class SingleComponent implements OnInit {
   private splitDate(date: string): Array<string> {
     if (date) return date.split("/");
   }
+  private splitTags(tags: string): string {
+    if (tags) return tags.split(',').join(', ');
+  }
 
   private getData(keyword: number): void {
     this.http
@@ -42,6 +46,7 @@ export class SingleComponent implements OnInit {
       .subscribe(val => {
         this.work = val.data[0];
         this.dateSplit = this.splitDate(this.work.date);
+        this.tag = this.splitTags(this.work.tag);
       });
   }
 }

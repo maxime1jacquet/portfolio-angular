@@ -1,4 +1,4 @@
-@import "../../../../../assets/stylesheets/variables";
+@import "../../../../../stylesheets/variables";
 
 .about{
   $root : &;
@@ -22,10 +22,6 @@
     #{$root}__presentation{
       transform: translateX(0px);
       opacity: 1;
-
-      strong{
-        background-color: $denim;
-      }
     }
   }
 
@@ -41,6 +37,7 @@
     }
   }
 
+
   &__button{
     appearance: none;
     background-color: $pomegranate;
@@ -48,17 +45,14 @@
     border:0px;
     color:$black;
     cursor: pointer;
+    font-size: 12px;
     height: 40px;
     margin-top: $marge;
     outline: none;
-    padding: 3px 10px;
-    width: auto;
+    padding: 10px;
+    position: relative;
     text-decoration: underline;
-
-    opacity: 0;
-    transform: translateX(- #{$marge});
-    transition: opacity 300ms ease-out;
-    transition-delay: opacity 200ms;
+    width: auto;
 
     &:hover, &:focus{
       background-color: $white;
@@ -100,13 +94,11 @@
     }
 
     strong{
-      position: relative;
-      font-weight: 500;
+      background-color: $denim;
       color:$black;
+      font-weight: 500;
       padding: 0 5px;
-      background-color: transparent;
-      transition: all 500ms ease-out;
-      transition-delay: 700ms;
+      position: relative;
       text-decoration: none;
     }
 
