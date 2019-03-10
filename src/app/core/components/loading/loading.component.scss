@@ -1,0 +1,16 @@
+@import "../../../../stylesheets/variables";
+
+.loading {
+  background-color: $black;
+  height: 100%;
+  right: 0;
+  position: absolute;
+  top: 0;
+  transition: all 500ms ease-out;
+  width: 100%;
+  z-index: $z-loading;
+
+  &.loaded {
+    width: 0%;
+  }
+}

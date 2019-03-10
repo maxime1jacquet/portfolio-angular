@@ -5,5 +5,5 @@ import * as fromRouter from "@ngrx/router-store";
 export interface AppcoreState {
   router: fromRouter.RouterReducerState<fromModel.RouterStateCustom>;
   menu: fromModel.MenuState;
-  // seo: fromSharedModel.SeoMetas;
+  title: fromModel.TitleState;
 }

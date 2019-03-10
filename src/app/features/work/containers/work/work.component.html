@@ -1,5 +1,5 @@
 <section class="work" [class.loaded]="loaded">
-  <div class="work__container" *ngIf="works">
+  <div class="work__container" *ngIf="(works$ | async) as works">
     <div
       class="work__item"
       *ngFor="let work of works; let i = index"

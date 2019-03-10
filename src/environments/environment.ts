@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // endpoint : 'https://api-projets.maximejacquet.fr',
-  endpoint : 'http://localhost:8081'
+  // endpoint: "https://api-projets.maximejacquet.fr"
+  endpoint: "http://localhost:8081"
 };
 
 /*

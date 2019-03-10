@@ -21,6 +21,7 @@ import { environment } from "../../environments/environment";
 import * as fromComponents from "./components";
 import * as fromContainers from "./containers";
 import * as fromModels from "./models";
+import * as fromServices from "./services";
 
 export const metaReducers: MetaReducer<
   fromModels.AppcoreState
@@ -28,11 +29,9 @@ export const metaReducers: MetaReducer<
 
 @NgModule({
   imports: [
-    BrowserModule.withServerTransition({ appId: "maximejacquet" }),
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
     HttpClientModule,
+    AppRoutingModule,
+    BrowserModule.withServerTransition({ appId: "maximejacquet" }),
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot(effects),
     StoreRouterConnectingModule.forRoot(),
@@ -41,7 +40,7 @@ export const metaReducers: MetaReducer<
       : []
   ],
   declarations: [...fromContainers.components, ...fromComponents.components],
-  providers: [],
+  providers: [...fromServices.services],
   bootstrap: [fromContainers.AppComponent]
 })
 export class AppModule {

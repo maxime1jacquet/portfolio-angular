@@ -6,6 +6,11 @@ import { environment } from "../../../../../environments/environment";
 import { Observable, throwError } from "rxjs";
 import { catchError, map } from "rxjs/operators";
 
+import { Store } from "@ngrx/store";
+
+import * as fromStore from "../../store";
+import * as fromModel from "../../models";
+
 @Component({
   selector: "app-work",
   templateUrl: "./work.component.html",
@@ -15,13 +20,15 @@ export class WorkComponent implements OnInit {
   public config: any;
   public index: any;
 
-  public works: any;
+  public works$: Observable<fromModel.Work[]>;
   public loaded: boolean = false;
 
   constructor(
     private http: HttpClient,
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    // private store: Store<fromModel.AppcoreState>
+    private store: Store<fromModel.WorksState>
   ) {}
 
   ngOnInit() {
@@ -31,7 +38,10 @@ export class WorkComponent implements OnInit {
       content: "front end developer at Yoozly"
     });
     this.loadedPage();
-    this.getData();
+    // this.getData();
+
+    this.store.dispatch(new fromStore.LoadWork());
+    this.works$ = this.store.select(fromStore.getResultsEntities);
   }
 
   private loadedPage(): void {
@@ -40,12 +50,12 @@ export class WorkComponent implements OnInit {
     }, 100);
   }
 
-  private getData(): void {
-    this.http
-      .get<any>(`${environment.endpoint}/project`)
-      .pipe(catchError((error: any) => throwError(error.json())))
-      .subscribe(val => {
-        this.works = val.data;
-      });
-  }
+  // private getData(): void {
+  //   this.http
+  //     .get<any>(`${environment.endpoint}/project`)
+  //     .pipe(catchError((error: any) => throwError(error.json())))
+  //     .subscribe(val => {
+  //       this.works = val.data;
+  //     });
+  // }
 }

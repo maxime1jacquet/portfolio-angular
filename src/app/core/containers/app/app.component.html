@@ -1,13 +1,19 @@
 <div class="body" *ngIf="(menuState$ | async) as menuState">
-
   <app-header
     [isMenuOpen]="menuState.isOpen"
     (onOpenMenu)="openMenu()"
   ></app-header>
-  
-  <main class='app' [class.open]='menuState.isOpen' (mouseenter)="closeMenu()">
+
+  <main
+    *ngIf="(title$ | async) as title"
+    class="app"
+    [class.open]="menuState.isOpen"
+    (mouseenter)="closeMenu()"
+  >
+    <loading [isLoaded]="title.loaded"></loading>
+
     <div class="app__content">
-      <app-title></app-title>
+      <app-title [title]="title"></app-title>
       <router-outlet #outlet="outlet"></router-outlet>
     </div>
   </main>

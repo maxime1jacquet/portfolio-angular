@@ -1,54 +1,52 @@
-<section class="about" [class.loaded]='loaded'>
-  
-  <div class="about__parcours" [class.show]='idOpenExp'>
-    <h2>
-      Développeur web chez Amalgame,<br>
-      & étudiant licence pro Créaweb à l'IUT de Lens.
-    </h2>
-    <h2>
-      DUT Métiers du Multimédia et de l'Internet,<br>
-      à l'IUT de Lens.
-    </h2>
-    <h2>
-      BAC Scientifique,<br>
-      mention bien au lycée Beaupré à Haubourdin.
+<section class="about" [class.loaded]="loaded">
+  <div
+    class="about__parcours"
+    [class.show]="idOpenExp"
+    *ngIf="(title$ | async) as title"
+  >
+    <h2 *ngFor="let hn of (title.entities | slice: 1)">
+      {{ hn.line_one }}<br />
+      {{ hn.line_two }}
     </h2>
   </div>
-  
+
   <div>
-    <button class="about__button" (click)='openExp()'>
-      <span *ngIf='idOpenExp'>-</span>
-      <span *ngIf='!idOpenExp'>+</span>
+    <button class="about__button" (click)="openExp()">
+      <span *ngIf="idOpenExp">-</span>
+      <span *ngIf="!idOpenExp">+</span>
       d'expériences
     </button>
   </div>
 
-  <img tabindex='0' class='about__img' src="/assets/imgs/profil.jpg" alt="Photo de Maxime Jacquet">
-  
+  <img
+    tabindex="0"
+    class="about__img"
+    src="/assets/imgs/profil.jpg"
+    alt="Photo de Maxime Jacquet"
+  />
+
   <div class="about__presentation">
     <div class="about__texte">
       <p>
-        Je suis développeur front-end et  <strong>passionné par mon métier</strong>.<br>
-        J'apprends en autodidacte tous les jours de bonnes pratiques, de nouveaux languages ou encore de nouvelles methodes.
-        A ce jour, j'ai de solides connaissances dans le développement de sites internets.
-        Je maitrise les languages de programmations comme 
-        HTML, CSS, JAVASCRIPT, AJAX et PHP. Cependant j'utilise plus fréquemment <strong>PUG, SASS, ANGULAR, VUEJS, ES6</strong>.<br>
-        En tant que développeur front-end, j'accorde une importance capitale aux designs des sites que je développe. 
-        Je connais l'importance des étapes <strong>UX, UI et de web desing</strong> qui précedent la phase de developpement.
+        Je suis développeur front-end et
+        <strong>passionné par mon métier</strong>.<br />
+        J'apprends en autodidacte tous les jours de bonnes pratiques, de
+        nouveaux languages ou encore de nouvelles methodes. A ce jour, j'ai de
+        solides connaissances dans le développement de sites internets. Je
+        maitrise les languages de programmations comme HTML, CSS, JAVASCRIPT,
+        AJAX et PHP. Cependant j'utilise plus fréquemment
+        <strong>PUG, SASS, ANGULAR, VUEJS, ES6</strong>.<br />
+        En tant que développeur front-end, j'accorde une importance capitale aux
+        designs des sites que je développe. Je connais l'importance des étapes
+        <strong>UX, UI et de web desing</strong> qui précedent la phase de
+        developpement.
       </p>
       <p>
-        En entreprise je suis sérieux et rigoureux, j'aime être fière des projets réalisés.
-        J'aime particulièrement travailler sur les <strong>phases de conception</strong> d'un projet 
-        afin de le suivre tout au long de sa réalisation.
-        <br><br>
+        En entreprise je suis sérieux et rigoureux, j'aime être fière des
+        projets réalisés. J'aime particulièrement travailler sur les
+        <strong>phases de conception</strong> d'un projet afin de le suivre tout
+        au long de sa réalisation. <br /><br />
       </p>
-
-      <div>
-        <a class="about__button" href='https://maximejacquet.fr/assets/maximejacquet_cv.pdf' target="_blank">
-          Télécharger mon CV
-        </a>
-      </div>
-
     </div>
   </div>
 
@@ -56,8 +54,8 @@
     <skill-svg id="1"></skill-svg>
     <skill-svg id="2"></skill-svg>
     <skill-svg id="3"></skill-svg>
-    <skill-svg id="4"></skill-svg>
     <skill-svg id="11"></skill-svg>
+    <skill-svg id="4"></skill-svg>
     <skill-svg id="5"></skill-svg>
     <skill-svg id="6"></skill-svg>
     <skill-svg id="7"></skill-svg>
@@ -65,7 +63,4 @@
     <skill-svg id="9"></skill-svg>
     <skill-svg id="10"></skill-svg>
   </div>
-  
 </section>
-
-
