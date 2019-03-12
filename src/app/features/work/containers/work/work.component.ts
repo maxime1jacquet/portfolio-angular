@@ -20,14 +20,15 @@ export class WorkComponent implements OnInit {
   public config: any;
   public index: any;
 
-  public works$: Observable<fromModel.Work[]>;
+  // public works$: Observable<fromModel.Work>;
+  public works$: Observable<any>;
+  public loaded$: Observable<boolean>;
   public loaded: boolean = false;
 
   constructor(
     private http: HttpClient,
     private title: Title,
     private meta: Meta,
-    // private store: Store<fromModel.AppcoreState>
     private store: Store<fromModel.WorksState>
   ) {}
 
@@ -37,25 +38,16 @@ export class WorkComponent implements OnInit {
       name: "description",
       content: "front end developer at Yoozly"
     });
-    this.loadedPage();
-    // this.getData();
+    // this.loadedPage();
 
     this.store.dispatch(new fromStore.LoadWork());
     this.works$ = this.store.select(fromStore.getResultsEntities);
+    this.loaded$ = this.store.select(fromStore.getResultsLoaded);
   }
 
-  private loadedPage(): void {
-    setTimeout(() => {
-      this.loaded = true;
-    }, 100);
-  }
-
-  // private getData(): void {
-  //   this.http
-  //     .get<any>(`${environment.endpoint}/project`)
-  //     .pipe(catchError((error: any) => throwError(error.json())))
-  //     .subscribe(val => {
-  //       this.works = val.data;
-  //     });
+  // private loadedPage(): void {
+  //   setTimeout(() => {
+  //     this.loaded = true;
+  //   }, 100);
   // }
 }

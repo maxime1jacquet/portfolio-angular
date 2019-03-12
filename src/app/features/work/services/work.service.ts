@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { Update } from "@ngrx/entity";
 
 import { Observable, throwError, of } from "rxjs";
 import { catchError, map, tap } from "rxjs/operators";

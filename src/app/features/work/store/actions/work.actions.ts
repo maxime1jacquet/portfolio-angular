@@ -1,5 +1,6 @@
 import { Action } from "@ngrx/store";
 import * as fromModel from "../../models";
+import { Update } from "@ngrx/entity";
 
 export const enum WorkActionTypes {
   LOAD_WORK = "[Work] Load Work",

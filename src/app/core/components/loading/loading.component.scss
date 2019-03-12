@@ -1,16 +1,23 @@
 @import "../../../../stylesheets/variables";
 
 .loading {
-  background-color: $black;
+  background-color: $white;
+  background: linear-gradient(
+    to bottom right,
+    #{$white},
+    #{darken($white, 10%)}
+  );
+  bottom: 0;
   height: 100%;
+  position: fixed;
   right: 0;
-  position: absolute;
-  top: 0;
-  transition: all 500ms ease-out;
+  transition-delay: 1000ms;
+  transition: all 400ms ease-out;
   width: 100%;
   z-index: $z-loading;
 
   &.loaded {
-    width: 0%;
+    opacity: 0;
+    visibility: hidden;
   }
 }

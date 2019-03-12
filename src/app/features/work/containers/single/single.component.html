@@ -1,10 +1,14 @@
-<section class="single" *ngIf="work" [class.loaded]="loaded">
-  <h2 class="single__title">{{ work.title }}</h2>
-  <div class="single__date" *ngIf="work.date">
-    <span>{{ dateSplit[0] }}</span>
-    <div></div>
-    <span>{{ dateSplit[1] }}</span>
-  </div>
+<section
+  class="single"
+  *ngIf="(works$ | async) as works"
+  [class.loaded]="loaded"
+>
+  <h2 class="single__title">{{ works[slug].title }}</h2>
+  <!-- <div class="single__date" *ngIf="work.date">
+      <span>{{ dateSplit[0] }}</span>
+      <div></div>
+      <span>{{ dateSplit[1] }}</span>
+    </div> -->
 
   <a class="single__close" routerLink="/works" aria-label="fermer le projet">
     <svg
@@ -24,9 +28,10 @@
 
   <div class="single__content">
     <div class="single__tag">
-      {{tag}}
+      {{ works[slug].tag }}
     </div>
-    <portfolio [data]="work.porfolio"></portfolio>
+    <div *ngIf="works[slug].porfolio">
+      <portfolio [data]="works[slug].porfolio"></portfolio>
+    </div>
   </div>
-
 </section>

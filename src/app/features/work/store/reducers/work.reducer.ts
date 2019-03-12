@@ -1,14 +1,27 @@
+import { createEntityAdapter } from "@ngrx/entity";
+
 import * as fromActions from "../actions";
 import * as fromModels from "../../models";
 
-const initialState: fromModels.WorkState = {
-  entities: null,
+function customIds(work: fromModels.Work): string {
+  return work.slug;
+}
+function sortById(a: fromModels.Work, b: fromModels.Work): number {
+  // return a.id.localeCompare(b.id);
+  return b.id - a.id;
+}
+export const adapter = createEntityAdapter<fromModels.Work>({
+  selectId: customIds,
+  sortComparer: sortById
+});
+
+const initialState: fromModels.WorkState = adapter.getInitialState({
   loaded: false,
   loading: false
-};
+});
 
 export function reducer(
-  state = initialState,
+  state: fromModels.WorkState = initialState,
   action: fromActions.WorkActions
 ): fromModels.WorkState {
   switch (action.type) {
@@ -26,12 +39,11 @@ export function reducer(
       };
 
     case fromActions.WorkActionTypes.LOAD_WORK_SUCESS:
-      return {
+      return adapter.addAll(action.payload, {
         ...state,
-        entities: action.payload,
         loading: false,
         loaded: true
-      };
+      });
 
     default:
       return state;

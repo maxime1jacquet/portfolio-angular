@@ -5,11 +5,13 @@ import {
   switchMap,
   mergeMap,
   withLatestFrom,
-  tap
+  tap,
+  map
 } from "rxjs/operators";
 
 import { Store } from "@ngrx/store";
 import { Effect, Actions, ofType } from "@ngrx/effects";
+import { Update } from "@ngrx/entity";
 
 import * as fromActions from "../actions";
 import * as fromServices from "../../services";

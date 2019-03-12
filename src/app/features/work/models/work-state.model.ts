@@ -1,5 +1,6 @@
-export interface WorkState {
-  entities: Array<Work>;
+import { EntityState } from "@ngrx/entity";
+
+export interface WorkState extends EntityState<Work> {
   loading: boolean;
   loaded: boolean;
 }
