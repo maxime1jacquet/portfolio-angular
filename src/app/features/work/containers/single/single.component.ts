@@ -16,7 +16,6 @@ import * as fromModel from "../../models";
 })
 export class SingleComponent implements OnInit {
   public loaded: boolean = false;
-  // public dateSplit: Array<string>;
 
   // public works$: Observable<fromModel.Work>;
   public works$: Observable<any>;
@@ -30,11 +29,9 @@ export class SingleComponent implements OnInit {
 
   ngOnInit() {
     this.slug = this.route.snapshot.params["slug"];
-    if (!this.works$) {
-      this.store.dispatch(new fromStore.LoadWork());
-    }
-    this.works$ = this.store.select(fromStore.getResultsEntities);
-    this.loaded$ = this.store.select(fromStore.getResultsLoaded);
+    this.store.dispatch(new fromStore.LoadWork());
+    this.works$ = this.store.select(fromStore.getWorksEntities);
+    this.loaded$ = this.store.select(fromStore.getWorksLoaded);
     this.loadedPage();
   }
 
@@ -42,9 +39,5 @@ export class SingleComponent implements OnInit {
     setTimeout(() => {
       this.loaded = true;
     }, 100);
-  }
-
-  private splitDate(date: string): Array<string> {
-    if (date) return date.split("/");
   }
 }

@@ -3,35 +3,32 @@
   *ngIf="(works$ | async) as works"
   [class.loaded]="loaded"
 >
-  <h2 class="single__title">{{ works[slug].title }}</h2>
-  <!-- <div class="single__date" *ngIf="work.date">
-      <span>{{ dateSplit[0] }}</span>
-      <div></div>
-      <span>{{ dateSplit[1] }}</span>
-    </div> -->
+  <div *ngIf="works[slug]">
+    <h2 class="single__title">{{ works[slug].title }}</h2>
 
-  <a class="single__close" routerLink="/works" aria-label="fermer le projet">
-    <svg
-      width="357px"
-      height="357px"
-      viewBox="0 0 357 357"
-      style="enable-background:new 0 0 357 357;"
-      xml:space="preserve"
-    >
-      <g>
-        <g id="add">
-          <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z" />
+    <a class="single__close" routerLink="/works" aria-label="fermer le projet">
+      <svg
+        width="357px"
+        height="357px"
+        viewBox="0 0 357 357"
+        style="enable-background:new 0 0 357 357;"
+        xml:space="preserve"
+      >
+        <g>
+          <g id="add">
+            <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z" />
+          </g>
         </g>
-      </g>
-    </svg>
-  </a>
+      </svg>
+    </a>
 
-  <div class="single__content">
-    <div class="single__tag">
-      {{ works[slug].tag }}
-    </div>
-    <div *ngIf="works[slug].porfolio">
-      <portfolio [data]="works[slug].porfolio"></portfolio>
+    <div class="single__content">
+      <div class="single__tag">
+        {{ works[slug].tag }}
+      </div>
+      <div *ngIf="works[slug].porfolio">
+        <portfolio [data]="works[slug].porfolio"></portfolio>
+      </div>
     </div>
   </div>
 </section>

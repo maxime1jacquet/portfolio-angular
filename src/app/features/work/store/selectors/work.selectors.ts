@@ -11,7 +11,7 @@ export const getWorkState = createSelector(
   (state: fromModel.WorksState) => state.work
 );
 
-export const getResultsEntities = createSelector(
+export const getWorksEntities = createSelector(
   getWorkState,
   selectEntities
 );
@@ -21,12 +21,12 @@ export const getAllWorks = createSelector(
   selectAll
 );
 
-export const getResultsLoading = createSelector(
+export const getWorksLoading = createSelector(
   getWorkState,
   (state: fromModel.WorkState) => state.loading
 );
 
-export const getResultsLoaded = createSelector(
+export const getWorksLoaded = createSelector(
   getWorkState,
   (state: fromModel.WorkState) => state.loaded
 );

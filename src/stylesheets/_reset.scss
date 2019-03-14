@@ -1,25 +1,39 @@
 // @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono');
+@import url("https://fonts.googleapis.com/css?family=Oxygen+Mono");
 
 html {
   box-sizing: border-box;
   font-size: 15px;
-  font-family: 'Oxygen Mono', monospace;
+  font-family: "Oxygen Mono", monospace;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body{
-  overflow:hidden;
+body {
+  overflow: hidden;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul, input, select, button {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+input,
+select,
+button {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  font-family: 'Oxygen Mono', monospace;
+  font-family: "Oxygen Mono", monospace;
 }
 
 img {
@@ -29,12 +43,12 @@ img {
 }
 
 /*CUSTOM TAG*/
-app-main{
-  flex:1;
+app-main {
+  flex: 1;
   display: flex;
 }
 
-app-work{
-  flex:1;
+app-work {
+  flex: 1;
   display: flex;
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { Title, Meta } from "@angular/platform-browser";
-import { HttpClient } from "@angular/common/http";
 
 import { environment } from "../../../../../environments/environment";
 import { Observable, throwError } from "rxjs";
@@ -23,10 +22,9 @@ export class WorkComponent implements OnInit {
   // public works$: Observable<fromModel.Work>;
   public works$: Observable<any>;
   public loaded$: Observable<boolean>;
-  public loaded: boolean = false;
+  public loadede: boolean = false;
 
   constructor(
-    private http: HttpClient,
     private title: Title,
     private meta: Meta,
     private store: Store<fromModel.WorksState>
@@ -38,16 +36,16 @@ export class WorkComponent implements OnInit {
       name: "description",
       content: "front end developer at Yoozly"
     });
-    // this.loadedPage();
+    this.loadedPage();
 
     this.store.dispatch(new fromStore.LoadWork());
-    this.works$ = this.store.select(fromStore.getResultsEntities);
-    this.loaded$ = this.store.select(fromStore.getResultsLoaded);
+    this.works$ = this.store.select(fromStore.getAllWorks);
+    this.loaded$ = this.store.select(fromStore.getWorksLoaded);
   }
 
-  // private loadedPage(): void {
-  //   setTimeout(() => {
-  //     this.loaded = true;
-  //   }, 100);
-  // }
+  private loadedPage(): void {
+    setTimeout(() => {
+      this.loadede = true;
+    }, 100);
+  }
 }
