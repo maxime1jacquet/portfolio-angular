@@ -1,13 +1,13 @@
 @import "../../../../stylesheets/variables";
 
-.title{
-  margin:0 auto;
+.title {
+  margin: 0 auto;
   max-width: $max-width;
   position: relative;
   z-index: $z-title;
 
-  h1{
-    color:$denim;
+  h1 {
+    color: $denim;
     font-size: 35px;
     display: inline-block;
     width: auto;
@@ -20,11 +20,11 @@
       margin-top: 10px;
     }
   }
-  
-  h2{
-    color:$pomegranate;
+
+  h2 {
+    color: $pomegranate;
     font-size: 22px;
-    min-height:60px;
+    min-height: 60px;
     @media screen and(max-width:#{$breakpoint}) {
       font-size: 16px;
     }

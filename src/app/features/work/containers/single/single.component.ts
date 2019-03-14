@@ -17,7 +17,6 @@ import * as fromModel from "../../models";
 export class SingleComponent implements OnInit {
   public loaded: boolean = false;
 
-  // public works$: Observable<fromModel.Work>;
   public works$: Observable<any>;
   public loaded$: Observable<boolean>;
   public slug: string;

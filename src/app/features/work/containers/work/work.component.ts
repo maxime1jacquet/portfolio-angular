@@ -19,8 +19,7 @@ export class WorkComponent implements OnInit {
   public config: any;
   public index: any;
 
-  // public works$: Observable<fromModel.Work>;
-  public works$: Observable<any>;
+  public works$: Observable<fromModel.Work[]>;
   public loaded$: Observable<boolean>;
   public loadede: boolean = false;
 

@@ -1,6 +1,7 @@
 <div *ngIf="(menuState$ | async) as menuState">
   <div *ngIf="(title$ | async) as title">
     <loading [isLoaded]="title.loaded"></loading>
+
     <app-header
       [isMenuOpen]="menuState.isOpen"
       (onOpenMenu)="openMenu()"
