@@ -22,10 +22,10 @@
     &:hover,
     &:focus {
       #{$root}__title {
-        transform: translateX(40px);
+        transform: translateX(30px);
       }
       #{$root}__date {
-        transform: translateX(40px);
+        transform: translateX(30px);
       }
       #{$root}__tag {
         transform: translateX(20px);

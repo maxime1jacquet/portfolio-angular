@@ -1,27 +1,26 @@
 @import "../../../../../stylesheets/variables";
 
-.portfolio{
-  
-  &__item{
+.portfolio {
+  &__item {
     padding: $marge 0;
   }
 
-  &__link{
-
+  &__link {
   }
 
-  &__text::ng-deep{
-    ul{
+  &__text::ng-deep {
+    line-height: 22px;
+    ul {
       padding-left: 20px;
     }
   }
 
-  &__button{
+  &__button {
     appearance: none;
     background-color: $pomegranate;
     border-radius: 0;
-    border:0px;
-    color:$black;
+    border: 0px;
+    color: $black;
     cursor: pointer;
     font-size: 12px;
     height: 40px;
@@ -32,16 +31,16 @@
     text-decoration: underline;
     width: auto;
 
-    &:hover, &:focus{
+    &:hover,
+    &:focus {
       background-color: $white;
     }
 
-    &::before{
-      content: '>';
+    &::before {
+      content: ">";
       position: absolute;
       left: 10px;
       top: 10px;
     }
   }
-
 }

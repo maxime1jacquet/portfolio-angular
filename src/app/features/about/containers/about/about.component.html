@@ -2,9 +2,9 @@
   <div
     class="about__parcours"
     [class.show]="idOpenExp"
-    *ngIf="(title$ | async) as title"
+    *ngIf="title$ | async as title"
   >
-    <h2 *ngFor="let hn of (title.entities | slice: 1)">
+    <h2 *ngFor="let hn of title.entities | slice: 1">
       {{ hn.line_one }}<br />
       {{ hn.line_two }}
     </h2>
@@ -18,12 +18,13 @@
     </button>
   </div>
 
-  <img
-    tabindex="0"
-    class="about__img"
-    src="/assets/imgs/profil.jpg"
-    alt="Photo de Maxime Jacquet"
-  />
+  <div class="about__img">
+    <img
+      tabindex="0"
+      src="/assets/imgs/profil.jpg"
+      alt="Photo de Maxime Jacquet"
+    />
+  </div>
 
   <div class="about__presentation">
     <div class="about__texte">
@@ -54,12 +55,14 @@
     <skill-svg id="1"></skill-svg>
     <skill-svg id="2"></skill-svg>
     <skill-svg id="3"></skill-svg>
+    <skill-svg id="12"></skill-svg>
     <skill-svg id="11"></skill-svg>
     <skill-svg id="4"></skill-svg>
     <skill-svg id="5"></skill-svg>
     <skill-svg id="6"></skill-svg>
     <skill-svg id="7"></skill-svg>
     <skill-svg id="8"></skill-svg>
+    <skill-svg id="13"></skill-svg>
     <skill-svg id="9"></skill-svg>
     <skill-svg id="10"></skill-svg>
   </div>
