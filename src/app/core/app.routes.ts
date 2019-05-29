@@ -9,15 +9,18 @@ const routes: Routes = [
   },
   {
     path: "work",
-    loadChildren: "../features/work/work.module#WorkModule"
+    loadChildren: () =>
+      import("../features/work/work.module").then(m => m.WorkModule)
   },
   {
     path: "about",
-    loadChildren: "../features/about/about.module#AboutModule"
+    loadChildren: () =>
+      import("../features/about/about.module").then(m => m.AboutModule)
   },
   {
     path: "contact",
-    loadChildren: "../features/contact/contact.module#ContactModule"
+    loadChildren: () =>
+      import("../features/contact/contact.module").then(m => m.ContactModule)
   },
   {
     path: "**",
