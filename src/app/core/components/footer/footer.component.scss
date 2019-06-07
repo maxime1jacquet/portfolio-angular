@@ -4,7 +4,7 @@
   margin: 0 auto;
   max-width: $max-width;
   position: relative;
-  padding: $marge 0 5px;
+  padding: $marge 0 10px;
   display: flex;
   justify-content: flex-end;
 
@@ -14,10 +14,10 @@
 
   &__txt {
     color: $pomegranate;
-    font-size: 13px;
+    font-size: 12px;
 
     @media screen and(max-width:#{$breakpoint}) {
-      font-size: 12px;
+      font-size: 11px;
     }
   }
 
