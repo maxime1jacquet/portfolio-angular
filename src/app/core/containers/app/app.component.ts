@@ -1,18 +1,18 @@
-import { Component, ViewEncapsulation } from "@angular/core";
-import { Store } from "@ngrx/store";
-import { Observable } from "rxjs";
+import { Component, ViewEncapsulation } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
-import * as fromStore from "../../store";
-import * as fromModel from "../../models";
+import * as fromStore from '../../store';
+import * as fromModel from '../../models';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
+  selector: 'app-root',
+  templateUrl: './app.component.html',
   styleUrls: [
-    "../../../../../node_modules/sanitize.css/sanitize.css",
-    "../../../../../node_modules/normalize.css/normalize.css",
-    "../../../../stylesheets/_reset.scss",
-    "./app.component.scss"
+    '../../../../../node_modules/sanitize.css/sanitize.css',
+    '../../../../../node_modules/normalize.css/normalize.css',
+    '../../../../stylesheets/_reset.scss',
+    './app.component.scss'
   ],
   encapsulation: ViewEncapsulation.None
 })

@@ -1,0 +1,31 @@
+@import '../../../../stylesheets/variables';
+
+.footer {
+  margin: 0 auto;
+  max-width: $max-width;
+  position: relative;
+  padding: $marge 0 5px;
+  display: flex;
+  justify-content: flex-end;
+
+  @media screen and(max-width:#{$breakpoint}) {
+    justify-content: center;
+  }
+
+  &__txt {
+    color: $pomegranate;
+    font-size: 13px;
+
+    @media screen and(max-width:#{$breakpoint}) {
+      font-size: 12px;
+    }
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+    fill: $pomegranate;
+    margin: 0 10px;
+    transform: translateY(-1px);
+  }
+}
