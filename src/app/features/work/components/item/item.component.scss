@@ -1,4 +1,4 @@
-@import "../../../../../stylesheets/variables";
+@import '../../../../../stylesheets/variables';
 
 .item {
   $root: &;
@@ -55,7 +55,7 @@
   }
 
   @media screen and(max-width:#{$breakpoint}) {
-    padding: 20px $marge;
+    padding: 20px 0;
   }
 
   &__title {

@@ -1,39 +1,38 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "",
-    redirectTo: "work",
-    pathMatch: "full"
+    path: '',
+    redirectTo: 'work',
+    pathMatch: 'full'
   },
   {
-    path: "work",
+    path: 'work',
     loadChildren: () =>
-      import("../features/work/work.module").then(m => m.WorkModule)
+      import('../features/work/work.module').then(m => m.WorkModule)
   },
   {
-    path: "about",
+    path: 'about',
     loadChildren: () =>
-      import("../features/about/about.module").then(m => m.AboutModule)
+      import('../features/about/about.module').then(m => m.AboutModule)
   },
   {
-    path: "contact",
+    path: 'contact',
     loadChildren: () =>
-      import("../features/contact/contact.module").then(m => m.ContactModule)
+      import('../features/contact/contact.module').then(m => m.ContactModule)
   },
   {
-    path: "**",
-    redirectTo: "work"
+    path: '**',
+    redirectTo: 'work'
   }
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      initialNavigation: "enabled",
-      scrollPositionRestoration: "top",
-      paramsInheritanceStrategy: "always"
+      initialNavigation: 'enabled',
+      scrollPositionRestoration: 'top'
     })
   ],
   exports: [RouterModule]
