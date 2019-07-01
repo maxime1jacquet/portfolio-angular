@@ -1,15 +1,15 @@
 @import '../../../../stylesheets/variables';
 
 .footer {
-  margin: 0 auto;
-  max-width: $max-width;
-  position: relative;
-  padding: $marge 0 10px;
-  display: flex;
-  justify-content: flex-end;
+  display: none;
 
-  @media screen and(max-width:#{$breakpoint}) {
-    justify-content: center;
+  @media screen and(min-width:#{$breakpoint}) {
+    margin: 0 auto;
+    max-width: $max-width;
+    position: relative;
+    padding: $marge 0 10px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   &__txt {
