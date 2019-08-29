@@ -1,47 +1,14 @@
-# # Javascript Node CircleCI 2.0 configuration file
-# #
-# # Check https://circleci.com/docs/2.0/language-javascript/ for more details
-# #
-# version: 2
-# jobs:
-#   build:
-#     docker:
-#       # specify the version you desire here
-#       - image: circleci/node:10.15.1
-
-#       # Specify service dependencies here if necessary
-#       # CircleCI maintains a library of pre-built images
-#       # documented at https://circleci.com/docs/2.0/circleci-images/
-#       # - image: circleci/mongo:3.4.4
-
-#     working_directory: ~/portfolio-angular
-
-#     steps:
-#       - checkout
-
-#       # Download and cache dependencies
-#       - restore_cache:
-#           keys:
-#             - v1-dependencies-{{ checksum "package.json" }}
-#             # fallback to using the latest cache if no exact match is found
-#             - v1-dependencies-
-
-#       - run: npm ci
-#       - run: npm run build --prod
-
-#       - save_cache:
-#           paths:
-#             - node_modules
-#           key: v1-dependencies-{{ checksum "package.json" }}
-#       # run tests!
-#       # - run: yarn test
-
 version: 2
 jobs:
   build:
+    # branches:
+    # only:
+    #   - master
+
     working_directory: ~/portfolio-angular
     docker:
       - image: circleci/node:10.15.1
+
     steps:
       - checkout
       # - restore_cache:
@@ -57,15 +24,20 @@ jobs:
       - run:
           name: angular-build
           command: yarn ng build --prod
-      # - run:
-      #     name: angular-test
-      #     command: yarn test -- --single-run --no-progress
-      # - store_artifacts:
-      #     path: test-results.xml
-      #     prefix: tests
-      # - run:
-      #     name: angular-lint
-      #     command: yarn lint -- --formatters-dir ./tslint-formatters --format junit -o tslint.xml
+
       - store_artifacts:
           path: tslint.xml
           prefix: lint
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      #copy dist files to digitalocean
+      - run: scp -o StrictHostKeyChecking=no -r ./dist/portfolio-angular/* jama2864@fast.o2switch.net://home/toto
+  # deploy-job:
+  #   steps:
+  #     - add_ssh_keys:
+  #         fingerprints:
+  #           - "	57:0d:62:c6:41:2b:93:77:be:c3:0f:2b:ee:43:f0:19"
