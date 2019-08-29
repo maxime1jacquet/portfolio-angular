@@ -41,11 +41,11 @@ jobs:
   build:
     working_directory: ~/portfolio-angular
     docker:
-      - image: circleci/node:6-browsers
+      - image: circleci/node:10.15.1
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+      # - restore_cache:
+      #     key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
           name: install-dependencies
           command: yarn install
@@ -56,16 +56,16 @@ jobs:
             - ./node_modules
       - run:
           name: angular-build
-          command: yarn ng -- build --prod --aot --no-progress
-      - run:
-          name: angular-test
-          command: yarn test -- --single-run --no-progress
-      - store_artifacts:
-          path: test-results.xml
-          prefix: tests
-      - run:
-          name: angular-lint
-          command: yarn lint -- --formatters-dir ./tslint-formatters --format junit -o tslint.xml
+          command: yarn ng build --prod
+      # - run:
+      #     name: angular-test
+      #     command: yarn test -- --single-run --no-progress
+      # - store_artifacts:
+      #     path: test-results.xml
+      #     prefix: tests
+      # - run:
+      #     name: angular-lint
+      #     command: yarn lint -- --formatters-dir ./tslint-formatters --format junit -o tslint.xml
       - store_artifacts:
           path: tslint.xml
           prefix: lint
