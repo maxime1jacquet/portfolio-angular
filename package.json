@@ -25,7 +25,6 @@
     "@ngrx/store": "^7.3.0",
     "@ngrx/store-devtools": "^7.3.0",
     "core-js": "^2.5.4",
-    "ngx-swiper-wrapper": "^7.2.1",
     "normalize.css": "^8.0.1",
     "rxjs": "~6.5.2",
     "sanitize.css": "^8.0.0",
