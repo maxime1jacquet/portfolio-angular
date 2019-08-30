@@ -1,26 +1,25 @@
 version: 2
 jobs:
   build:
-    # branches:
-    # only:
-    #   - master
-
     working_directory: ~/portfolio-angular
     docker:
       - image: circleci/node:10.15.1
 
     steps:
       - checkout
-      # - restore_cache:
-      #     key: dependency-cache-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          key: dependency-cache-{{ checksum "yarn.lock" }}
+
       - run:
           name: install-dependencies
           command: yarn install
+
       - save_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
             - ./node_modules
+
       - run:
           name: angular-build
           command: yarn ng build --prod
@@ -34,8 +33,6 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # - run: scp -o StrictHostKeyChecking=no -r ./dist/portfolio-angular/* jama2864@fast.o2switch.net://home/jama2864/toto/
-
   deploy:
     machine:
       enabled: true
@@ -48,3 +45,15 @@ jobs:
           name: Deploy Over SSH
           command: |
             scp -o StrictHostKeyChecking=no -r ./dist/portfolio-angular/* jama2864@fast.o2switch.net://home/jama2864/toto/
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
