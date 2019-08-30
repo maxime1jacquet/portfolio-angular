@@ -34,10 +34,17 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - add_ssh_keys:
-          fingerprints:
-            - "	57:0d:62:c6:41:2b:93:77:be:c3:0f:2b:ee:43:f0:19"
+      # - run: scp -o StrictHostKeyChecking=no -r ./dist/portfolio-angular/* jama2864@fast.o2switch.net://home/jama2864/toto/
 
-      - run: scp -o StrictHostKeyChecking=no -r ./dist/portfolio-angular/* jama2864@fast.o2switch.net://home/jama2864/toto/
-# deploy-job:
-#   steps:
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - add_ssh_keys:
+        fingerprints:
+          - "	57:0d:62:c6:41:2b:93:77:be:c3:0f:2b:ee:43:f0:19"
+
+      - run:
+          name: Deploy Over SSH
+          command: |
+            scp -o StrictHostKeyChecking=no -r ./dist/portfolio-angular/* jama2864@fast.o2switch.net://home/jama2864/toto/
