@@ -1,0 +1,38 @@
+language: node_js
+node_js:
+  - "10.4.1"
+dist: trusty
+sudo: required
+branches:
+  only:
+    - master
+before_script:
+  - npm install -g @angular/cli
+script:
+  - ng lint
+  - ng build --prod --base-href /portfolio-angular/
+# sudo: true
+
+# # addons:
+# #   chrome: stable
+
+# branches:
+#   only:
+#     - master
+
+# before_script:
+#   - npm install -g @angular/cli
+
+# script:
+#   # - ng lint
+#   # - ng test
+#   # - ng e2e
+#   - yarn build --prod --base-href /portfolio-angular/ #base_href should be given in travis as an environment variable
+
+# deploy:
+#   provider: script
+#   skip_cleanup: true
+#   script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/<dir> <ssh-user>@<deploy-host>:path/to/files
+#   on:
+#     branch: master
+
