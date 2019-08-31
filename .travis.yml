@@ -9,7 +9,10 @@ branches:
 before_script:
   - yarn install -g @angular/cli
 script:
-  - ng lint
+  - npm run build
+script:
+  - yarn install
+  # - ng lint
   - ng build --prod --base-href /portfolio-angular/
 # sudo: true
 
