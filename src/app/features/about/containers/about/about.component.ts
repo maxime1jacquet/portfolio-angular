@@ -1,19 +1,19 @@
-import { Component, OnInit } from "@angular/core";
-import { Title, Meta } from "@angular/platform-browser";
-import { Store } from "@ngrx/store";
-import { Observable } from "rxjs";
+import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
-import * as fromRootStore from "../../../../core/store";
-import * as fromRootModel from "../../../../core/models";
+import * as fromRootStore from '../../../../core/store';
+import * as fromRootModel from '../../../../core/models';
 
 @Component({
-  selector: "app-about",
-  templateUrl: "./about.component.html",
-  styleUrls: ["./about.component.scss"]
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  public idOpenExp: boolean = false;
-  public loaded: boolean = false;
+  public idOpenExp = false;
+  public loaded = false;
   public title$: Observable<fromRootModel.TitleState>;
 
   constructor(
@@ -23,10 +23,10 @@ export class AboutComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.title.setTitle("A propos de moi → Maxime Jacquet front end developer");
+    this.title.setTitle('A propos de moi → Maxime Jacquet front end developer');
     this.meta.addTag({
-      name: "description",
-      content: "front end developer at Yoozly"
+      name: 'description',
+      content: 'front end developer at Yoozly'
     });
     this.title$ = this.store.select(fromRootStore.getTitleState);
     this.loadedPage();

@@ -1,7 +1,7 @@
-import { NgModule }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
-import { FormsModule }   from '@angular/forms';
-import { RouterModule }  from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 // import { StoreModule }   from '@ngrx/store';
 // import { EffectsModule } from '@ngrx/effects';
 
@@ -18,16 +18,13 @@ import * as fromContainers from './containers';
     CommonModule,
     FormsModule,
     RouterModule,
-    ContactRoutingModule,
+    ContactRoutingModule
     // StoreModule.forFeature('maxime', reducers),
     // EffectsModule.forFeature(effects),
   ],
-  declarations: [
-    ...fromComponents.components,
-    ...fromContainers.components,
-  ],
+  declarations: [...fromComponents.components, ...fromContainers.components]
   // providers: [
   //   ...fromServices.services
   // ]
 })
-export class ContactModule { }
+export class ContactModule {}

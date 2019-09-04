@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -12,11 +12,12 @@ import * as fromModel from '../../models';
     '../../../../../node_modules/sanitize.css/sanitize.css',
     '../../../../../node_modules/normalize.css/normalize.css',
     '../../../../stylesheets/_reset.scss',
+    '../../../../stylesheets/components/_button.scss',
     './app.component.scss'
   ],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public menuState$: Observable<fromModel.MenuState>;
   public title$: Observable<fromModel.TitleState>;
 

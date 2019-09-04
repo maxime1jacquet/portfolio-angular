@@ -1,13 +1,13 @@
-import { Component, OnInit, Output, EventEmitter, Input } from "@angular/core";
-import { Store } from "@ngrx/store";
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
 
-import * as fromStore from "../../store";
-import * as fromModel from "../../models";
+import * as fromStore from '../../store';
+import * as fromModel from '../../models';
 
 @Component({
-  selector: "app-header",
-  templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"]
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   @Input() isMenuOpen: boolean;

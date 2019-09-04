@@ -1,0 +1,23 @@
+@import '../variables';
+
+.button {
+  appearance: none;
+  background-color: $pomegranate;
+  border-radius: 0;
+  border: 0px;
+  color: $black;
+  cursor: pointer;
+  font-size: 12px;
+  height: 40px;
+  margin-top: $marge;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  text-decoration: underline;
+  width: auto;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+  }
+}

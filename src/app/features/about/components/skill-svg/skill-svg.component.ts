@@ -6,12 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./skill-svg.component.scss']
 })
 export class SkillSvgComponent implements OnInit {
+  @Input() id: number;
 
-  @Input() id:number;
-  
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

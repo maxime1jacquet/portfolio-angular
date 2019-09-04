@@ -4,12 +4,13 @@
   display: none;
 
   @media screen and(min-width:#{$breakpoint}) {
-    margin: 0 auto;
-    max-width: $max-width;
-    position: relative;
-    padding: $marge 0 10px;
+    background-color: #fff;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 10px;
+    max-width: $max-width;
+    position: absolute;
+    right: 10px;
   }
 
   &__txt {

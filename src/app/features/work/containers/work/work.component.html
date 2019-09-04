@@ -1,12 +1,12 @@
 <section
   class="work"
-  *ngIf="(loaded$ | async) as loaded"
+  *ngIf="loaded$ | async as loaded"
   [class.loaded]="loadede"
 >
-  <div class="work__container" *ngIf="(works$ | async) as works">
+  <div class="work__container" *ngIf="works$ | async as works">
     <div
       class="work__item"
-      *ngFor="let work of (works | keyvalue); let i = index"
+      *ngFor="let work of works | keyvalue; let i = index"
       [style.transition-delay]="i * 200 + 'ms'"
     >
       <item
