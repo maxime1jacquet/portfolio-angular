@@ -1,0 +1,14 @@
+<section class="main">
+  <span></span>
+  <button class="main__btn" [class.open]="menuOpen" (click)="toogleMenu()">
+    menu
+  </button>
+  <div class="main__menu" [class.open]="menuOpen">
+    <app-menu></app-menu>
+  </div>
+  <div class="main__content" [class.menu]="menuOpen">
+    <maximejacquet></maximejacquet>
+    <router-outlet></router-outlet>
+  </div>
+  <span></span>
+</section>

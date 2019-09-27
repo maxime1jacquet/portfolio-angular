@@ -1,7 +1,5 @@
-import { AppComponent } from './app/app.component';
+import { MainComponent } from './main/main.component';
 
-export const components: any[] = [
-  AppComponent
-];
+export const components: any[] = [MainComponent];
 
-export * from './app/app.component';
+export * from './main/main.component';

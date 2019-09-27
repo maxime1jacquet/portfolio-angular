@@ -1,16 +1,7 @@
-import { HeaderComponent } from './header/header.component';
-import { TitleComponent } from './title/title.component';
-import { LoadingComponent } from './loading/loading.component';
-import { FooterComponent } from './footer/footer.component';
+import { MaximeJacquetComponent } from './maximejacquet/maximejacquet.component';
+import { MenuComponent } from './menu/menu.component';
 
-export const components: any[] = [
-  HeaderComponent,
-  TitleComponent,
-  LoadingComponent,
-  FooterComponent
-];
+export const components: any[] = [MaximeJacquetComponent, MenuComponent];
 
-export * from './header/header.component';
-export * from './title/title.component';
-export * from './loading/loading.component';
-export * from './footer/footer.component';
+export * from './maximejacquet/maximejacquet.component';
+export * from './menu/menu.component';

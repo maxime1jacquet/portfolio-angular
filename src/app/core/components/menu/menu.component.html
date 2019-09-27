@@ -1,12 +1,12 @@
-<section class="contact" [class.loaded]="loaded">
-  <ul class="contact__list">
-    <li class="contact__item">
+<section class="menu">
+  <ul class="menu__contact">
+    <li>
       <a target="_blank" href="https://www.linkedin.com/in/maxime1jacquet/"
         >LinkedIn</a
       >
     </li>
 
-    <li class="contact__item">
+    <li>
       <a
         target="_blank"
         href="https://maximejacquet.fr/assets/maximejacquet_cv.pdf"
@@ -14,12 +14,19 @@
       >
     </li>
 
-    <li class="contact__item">
+    <li>
       <a target="_blank" href="https://github.com/maxime1jacquet">Github</a>
     </li>
 
-    <li class="contact__item">
+    <li>
       <a target="_blank" href="https://twitter.com/maxime1jacquet">Twitter</a>
     </li>
   </ul>
+
+  <ul class="menu__list">
+    <li routerLink="/portfolio" routerLinkActive="active">Portfolio</li>
+    <li routerLink="/about" routerLinkActive="active">About</li>
+  </ul>
+
+  <!-- <img src="/assets/imgs/profil.jpg" alt="" /> -->
 </section>

@@ -1,71 +1,18 @@
-<section class="about" [class.loaded]="loaded">
-  <div
-    class="about__parcours"
-    [class.show]="idOpenExp"
-    *ngIf="title$ | async as title"
-  >
-    <h2 *ngFor="let hn of title.entities | slice: 1">
-      {{ hn.line_one }}<br />
-      {{ hn.line_two }}
-    </h2>
-  </div>
-
-  <div>
-    <button class="about__button button" (click)="openExp()">
-      <span *ngIf="idOpenExp">-</span>
-      <span *ngIf="!idOpenExp">+</span>
-      d'expériences
-    </button>
-  </div>
-
-  <div class="about__img">
-    <img
-      tabindex="0"
-      src="/assets/imgs/profil.jpg"
-      alt="Photo de Maxime Jacquet"
-    />
-  </div>
-
-  <div class="about__presentation">
-    <div class="about__texte">
-      <p>
-        Je suis développeur front-end et
-        <strong>passionné par mon métier</strong>.<br />
-        J'apprends tous les jours de bonnes pratiques, de nouveaux languages ou
-        de nouvelles methodes. Après trois ans d'expérience professionnelle dans
-        une agence web. Je maitrise les languages de programmations comme HTML,
-        CSS, JAVASCRIPT, AJAX et PHP, MYSQL et Wordpress. Cependant j'utilise
-        plus fréquemment
-        <strong>SASS, ANGULAR, RXJS, VUEJS, ES6, API REST</strong>.<br />
-        En tant que développeur front-end, j'accorde une grande importance aux
-        designs des sites que je développe. Je connais l'importance des étapes
-        <strong>UX, UI et de web desing</strong> qui précedent la phase de
-        developpement.
-      </p>
-      <p>
-        En entreprise je suis sérieux et rigoureux, j'aime être fier des projets
-        réalisés. J'aime particulièrement travailler sur les
-        <strong>phases de conception</strong> d'un projet afin de le suivre tout
-        au long de sa réalisation. <br /><br />
-      </p>
-    </div>
-  </div>
-
-  <div class="about__skills">
-    <skill-svg id="1"></skill-svg>
-    <skill-svg id="14"></skill-svg>
-    <skill-svg id="3"></skill-svg>
-    <skill-svg id="15"></skill-svg>
-    <skill-svg id="12"></skill-svg>
-    <skill-svg id="11"></skill-svg>
-    <skill-svg id="2"></skill-svg>
-    <skill-svg id="4"></skill-svg>
-    <skill-svg id="5"></skill-svg>
-    <skill-svg id="6"></skill-svg>
-    <skill-svg id="7"></skill-svg>
-    <skill-svg id="8"></skill-svg>
-    <skill-svg id="13"></skill-svg>
-    <skill-svg id="9"></skill-svg>
-    <skill-svg id="10"></skill-svg>
-  </div>
+<section class="about">
+  <p>développeur <strong>front-end passionné</strong> par son métier.</p>
+  <p>
+    Après un master digital médias et trois ans d'expérience professionnelle
+    dans une agence web. J'utilise quotidiennement
+    <strong>HTML, SASS, ANGULAR, REDUX, RXJS, VUEJS, ES6 & REST API</strong>.
+  </p>
+  <p>
+    En tant que développeur front, j'accorde une grande importance aux designs
+    des sites que je développe. Je connais l'importance des étapes
+    <strong>UX, UI et de web desing</strong> qui précedent la phase de
+    developpement.
+  </p>
+  <p>
+    En entreprise je suis sérieux et rigoureux car j'aime
+    <strong>être fier des projets réalisés</strong>.
+  </p>
 </section>

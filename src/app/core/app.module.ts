@@ -38,7 +38,7 @@ export const metaReducers: MetaReducer<
   ],
   declarations: [...fromContainers.components, ...fromComponents.components],
   providers: [...fromServices.services],
-  bootstrap: [fromContainers.AppComponent]
+  bootstrap: [fromContainers.MainComponent]
 })
 export class AppModule {
   constructor(

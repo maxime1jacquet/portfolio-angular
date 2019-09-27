@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-
-import * as fromRootStore from '../../../../core/store';
-import * as fromRootModel from '../../../../core/models';
 
 @Component({
   selector: 'app-about',
@@ -12,33 +7,16 @@ import * as fromRootModel from '../../../../core/models';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  public idOpenExp = false;
-  public loaded = false;
-  public title$: Observable<fromRootModel.TitleState>;
-
-  constructor(
-    private title: Title,
-    private meta: Meta,
-    private store: Store<fromRootModel.AppcoreState>
-  ) {}
+  constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit() {
-    this.title.setTitle('A propos de moi → Maxime Jacquet front end developer');
+    this.title.setTitle(
+      'Maxime Jacquet, développeur front-end passionné par son métier'
+    );
     this.meta.addTag({
       name: 'description',
-      content: 'front end developer at Yoozly'
+      content:
+        "master digital médias et trois ans d'expérience professionnelle dans une agence web. J'utilise quotidiennement HTML, SASS, ANGULAR, REDUX, RXJS, VUEJS, ES6 & REST API."
     });
-    this.title$ = this.store.select(fromRootStore.getTitleState);
-    this.loadedPage();
-  }
-
-  public openExp(): void {
-    this.idOpenExp = !this.idOpenExp;
-  }
-
-  private loadedPage(): void {
-    setTimeout(() => {
-      this.loaded = true;
-    }, 0);
   }
 }

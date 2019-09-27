@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { NetworkPreload } from './services/network-preload.service';
+
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'work',
+    redirectTo: 'about',
     pathMatch: 'full'
-  },
-  {
-    path: 'work',
-    loadChildren: () =>
-      import('../features/work/work.module').then(m => m.WorkModule)
   },
   {
     path: 'about',
@@ -18,9 +15,9 @@ const routes: Routes = [
       import('../features/about/about.module').then(m => m.AboutModule)
   },
   {
-    path: 'contact',
+    path: 'portfolio',
     loadChildren: () =>
-      import('../features/contact/contact.module').then(m => m.ContactModule)
+      import('../features/work/work.module').then(m => m.WorkModule)
   },
   {
     path: '**',
@@ -32,6 +29,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, {
       initialNavigation: 'enabled',
+      preloadingStrategy: NetworkPreload,
       scrollPositionRestoration: 'top'
     })
   ],

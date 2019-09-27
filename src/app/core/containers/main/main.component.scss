@@ -1,0 +1,102 @@
+@import '../../../../stylesheets/variables';
+
+.main {
+  $largeur: 15px;
+  $menuW: 500px;
+  position: relative;
+  min-height: 100vh;
+  background-color: $blackk;
+  padding: calc(#{$largeur} + 20px);
+
+  &__btn {
+    cursor: pointer;
+    position: fixed;
+    top: calc(#{$largeur} * 2);
+    right: calc(#{$largeur} * 2);
+    border: 2px solid $whitee;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    background-color: transparent;
+    color: $whitee;
+    z-index: $z-menubtn;
+
+    transition: all 150ms ease-out;
+    transition-delay: 150ms;
+
+    &.open {
+      border: 2px solid $blackk;
+      color: $blackk;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: $largeur;
+    bottom: $largeur;
+    right: 0px;
+    width: $menuW;
+    background-color: $whitee;
+    transform: translateX(#{$menuW});
+    transition: all 150ms ease-out;
+    transition-delay: 150ms;
+    padding: $largeur;
+
+    z-index: $z-menu;
+
+    &.open {
+      transform: translateX(-#{$largeur});
+    }
+  }
+
+  &__content {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: translateX(0);
+
+    &.menu {
+      transform: translateX(-70px);
+    }
+  }
+
+  > span:first-child {
+    &::before,
+    &::after {
+      z-index: $z-marge;
+      content: '';
+      position: fixed;
+      right: 0;
+      left: 0;
+      height: $largeur;
+      width: 100vw;
+      background-color: $whitee;
+    }
+
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  > span:last-child {
+    &::before,
+    &::after {
+      z-index: $z-marge;
+      content: '';
+      position: fixed;
+      height: 100vh;
+      width: $largeur;
+      background-color: $whitee;
+      top: 0;
+      bottom: 0;
+    }
+
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+}
