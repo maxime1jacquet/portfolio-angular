@@ -24,9 +24,15 @@
   </ul>
 
   <ul class="menu__list">
-    <li routerLink="/portfolio" routerLinkActive="active">Projets</li>
-    <li routerLink="/about" routerLinkActive="active">À propos</li>
+    <li
+      (click)="changeLink()"
+      routerLink="/portfolio"
+      routerLinkActive="active"
+    >
+      Projets
+    </li>
+    <li (click)="changeLink()" routerLink="/about" routerLinkActive="active">
+      À propos
+    </li>
   </ul>
-
-  <!-- <img src="/assets/imgs/profil.jpg" alt="" /> -->
 </section>

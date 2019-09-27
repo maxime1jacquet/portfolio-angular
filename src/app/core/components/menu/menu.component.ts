@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  @Output() change: EventEmitter<void> = new EventEmitter();
+
   constructor() {}
 
   ngOnInit() {}
+
+  public changeLink() {
+    this.change.emit();
+  }
 }

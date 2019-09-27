@@ -28,4 +28,7 @@ export class MainComponent implements OnInit {
   toogleMenu() {
     this.menuOpen = !this.menuOpen;
   }
+  closeMenu() {
+    this.menuOpen = false;
+  }
 }

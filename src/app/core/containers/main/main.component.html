@@ -10,9 +10,9 @@
     menu
   </button>
   <div class="main__menu" [class.open]="menuOpen">
-    <app-menu></app-menu>
+    <app-menu (change)="closeMenu()"></app-menu>
   </div>
-  <div class="main__content" [class.menu]="menuOpen">
+  <div class="main__content" [class.menu]="menuOpen" (click)="closeMenu()">
     <maximejacquet></maximejacquet>
     <router-outlet></router-outlet>
   </div>
