@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title, Meta } from '@angular/platform-browser';
 
 import { Observable } from 'rxjs';
 
@@ -21,18 +20,9 @@ export class WorkComponent implements OnInit {
   public loaded$: Observable<boolean>;
   public loadede = false;
 
-  constructor(
-    private title: Title,
-    private meta: Meta,
-    private store: Store<fromModel.WorksState>
-  ) {}
+  constructor(private store: Store<fromModel.WorksState>) {}
 
   ngOnInit() {
-    this.title.setTitle('Maxime Jacquet → front end developer');
-    this.meta.addTag({
-      name: 'description',
-      content: 'front end developer at Yoozly'
-    });
     this.loadedPage();
 
     this.store.dispatch(new fromStore.LoadWork());

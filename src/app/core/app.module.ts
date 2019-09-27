@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 
 import { StoreModule, MetaReducer } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -28,6 +29,7 @@ export const metaReducers: MetaReducer<
   imports: [
     HttpClientModule,
     AppRoutingModule,
+    LoadingBarHttpClientModule,
     BrowserModule.withServerTransition({ appId: 'maximejacquet' }),
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot(effects),

@@ -1,22 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { Title, Meta } from '@angular/platform-browser';
+import { ajax } from 'rxjs/ajax';
 
+import { environment } from '../../../../../environments/environment';
+import { Observable } from 'rxjs';
+import { map, delay } from 'rxjs/operators';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  constructor(private title: Title, private meta: Meta) {}
+  public about$: Observable<string[]>;
+
+  constructor() {}
 
   ngOnInit() {
-    this.title.setTitle(
-      'Maxime Jacquet, développeur front-end passionné par son métier'
-    );
-    this.meta.addTag({
-      name: 'description',
-      content:
-        "master digital médias et trois ans d'expérience professionnelle dans une agence web. J'utilise quotidiennement HTML, SASS, ANGULAR, REDUX, RXJS, VUEJS, ES6 & REST API."
-    });
+    this.request();
+  }
+
+  public request() {
+    const endpoint = `${environment.endpoint}/about`;
+    this.about$ = ajax(endpoint).pipe(map(data => data.response.data));
   }
 }

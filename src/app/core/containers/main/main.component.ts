@@ -1,9 +1,5 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-
-import * as fromStore from '../../store';
-import * as fromModel from '../../models';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -19,9 +15,15 @@ import * as fromModel from '../../models';
 })
 export class MainComponent implements OnInit {
   public menuOpen = false;
-  constructor() {}
+  constructor(private title: Title, private meta: Meta) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.title.setTitle('Maxime Jacquet → front end developer');
+    this.meta.addTag({
+      name: 'description',
+      content: 'front end developer at Yoozly'
+    });
+  }
 
   toogleMenu() {
     this.menuOpen = !this.menuOpen;

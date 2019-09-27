@@ -6,9 +6,34 @@
   font-size: 45px;
   line-height: 70px;
   max-width: 60%;
+  position: relative;
+
+  &__redirect {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: $whitee;
+    padding: 10px 0px 5px 20px;
+    line-height: 24px;
+    font-size: 20px;
+    border-bottom: 2px solid $whitee;
+    text-decoration: none;
+    transition: all 150ms ease-out;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      padding: 10px 0px 5px 40px;
+    }
+  }
 
   p {
-    margin-top: 50px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba($whitee, 0.3);
+
+    &:last-child {
+      border: 0;
+    }
   }
 
   strong {

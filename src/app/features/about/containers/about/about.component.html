@@ -1,18 +1,7 @@
 <section class="about">
-  <p>développeur <strong>front-end passionné</strong> par son métier.</p>
-  <p>
-    Après un master digital médias et trois ans d'expérience professionnelle
-    dans une agence web. J'utilise quotidiennement
-    <strong>HTML, SASS, ANGULAR, REDUX, RXJS, VUEJS, ES6 & REST API</strong>.
-  </p>
-  <p>
-    En tant que développeur front, j'accorde une grande importance aux designs
-    des sites que je développe. Je connais l'importance des étapes
-    <strong>UX, UI et de web desing</strong> qui précedent la phase de
-    developpement.
-  </p>
-  <p>
-    En entreprise je suis sérieux et rigoureux car j'aime
-    <strong>être fier des projets réalisés</strong>.
-  </p>
+  <a class="about__redirect" routerLink="/portfolio">portfolio</a>
+
+  <div *ngIf="about$ | async as about">
+    <p *ngFor="let item of about" [innerHTML]="item"></p>
+  </div>
 </section>
