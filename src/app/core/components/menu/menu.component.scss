@@ -34,10 +34,10 @@
     height: 100%;
 
     li {
-      font-size: 30px;
-      padding: 10px 0;
-      outline: none;
       cursor: pointer;
+      font-size: 30px;
+      outline: none;
+      padding: 10px 0;
 
       &.active,
       &:hover,
