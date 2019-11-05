@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { NgxParallaxModule } from '@yoozly/ngx-parallax';
 
 import { StoreModule, MetaReducer } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -19,7 +20,6 @@ import { environment } from '../../environments/environment';
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
 import * as fromModels from './models';
-import * as fromServices from './services';
 
 export const metaReducers: MetaReducer<
   fromModels.AppcoreState
@@ -30,6 +30,7 @@ export const metaReducers: MetaReducer<
     HttpClientModule,
     AppRoutingModule,
     LoadingBarHttpClientModule,
+    NgxParallaxModule,
     BrowserModule.withServerTransition({ appId: 'maximejacquet' }),
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot(effects),
@@ -39,7 +40,7 @@ export const metaReducers: MetaReducer<
       : []
   ],
   declarations: [...fromContainers.components, ...fromComponents.components],
-  providers: [...fromServices.services],
+  providers: [],
   bootstrap: [fromContainers.MainComponent]
 })
 export class AppModule {

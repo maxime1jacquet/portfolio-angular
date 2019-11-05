@@ -1,7 +1,5 @@
-import { RouterEffects } from "./router.effect";
-import { TitleEffects } from "./title.effect";
+import { RouterEffects } from './router.effect';
 
-export const effects: any[] = [RouterEffects, TitleEffects];
+export const effects: any[] = [RouterEffects];
 
-export * from "./router.effect";
-export * from "./title.effect";
+export * from './router.effect';

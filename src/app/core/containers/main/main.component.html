@@ -1,20 +1,9 @@
-<ngx-loading-bar
-  [includeSpinner]="false"
-  height="5px"
-  color="#141414"
-></ngx-loading-bar>
-
-<section class="main">
-  <span></span>
-  <button class="main__btn" [class.open]="menuOpen" (click)="toogleMenu()">
-    menu
-  </button>
-  <div class="main__menu" [class.open]="menuOpen">
-    <app-menu (change)="closeMenu()"></app-menu>
-  </div>
-  <div class="main__content" [class.menu]="menuOpen" (click)="closeMenu()">
+<main class="main">
+  <div class="main__profil">
     <maximejacquet></maximejacquet>
+  </div>
+
+  <div class="main__content">
     <router-outlet></router-outlet>
   </div>
-  <span></span>
-</section>
+</main>

@@ -6,14 +6,14 @@ import { NetworkPreload } from './services/network-preload.service';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
+    redirectTo: 'portfolio',
     pathMatch: 'full'
   },
-  {
-    path: 'about',
-    loadChildren: () =>
-      import('../features/about/about.module').then(m => m.AboutModule)
-  },
+  // {
+  //   path: '',
+  //   loadChildren: () =>
+  //     import('../features/about/about.module').then(m => m.AboutModule)
+  // },
   {
     path: 'portfolio',
     loadChildren: () =>
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'work'
+    redirectTo: ''
   }
 ];
 
