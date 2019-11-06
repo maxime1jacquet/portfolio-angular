@@ -1,4 +1,4 @@
-import { EntityState } from "@ngrx/entity";
+import { EntityState } from '@ngrx/entity';
 
 export interface WorkState extends EntityState<Work> {
   loading: boolean;
@@ -11,5 +11,6 @@ export interface Work {
   title: string;
   date: string;
   tag: string;
+  image: string;
   porfolio: Array<any>;
 }

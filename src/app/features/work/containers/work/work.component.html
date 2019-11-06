@@ -1,22 +1,11 @@
-aefaefaefaefeaf
-<section
-  class="work"
-  *ngIf="loaded$ | async as loaded"
-  [class.loaded]="loadede"
->
+<section class="work">
   <div class="work__container" *ngIf="works$ | async as works">
     <div
       class="work__item"
       *ngFor="let work of works | keyvalue; let i = index"
       [style.transition-delay]="i * 200 + 'ms'"
     >
-      <item
-        [title]="work.value.title"
-        [slug]="work.value.slug"
-        [tags]="work.value.tag"
-        [date]="work.value.date"
-        [index]="i"
-      ></item>
+      <item *ngIf="work.value.image" [data]="work.value" [index]="i"></item>
     </div>
   </div>
 </section>

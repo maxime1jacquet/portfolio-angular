@@ -1,12 +1,12 @@
-<section
-  class="single"
-  *ngIf="(works$ | async) as works"
-  [class.loaded]="loaded"
->
+<section class="single" *ngIf="works$ | async as works" [class.loaded]="loaded">
   <div *ngIf="works[slug]">
     <h2 class="single__title">{{ works[slug].title }}</h2>
 
-    <a class="single__close" routerLink="/works" aria-label="fermer le projet">
+    <a
+      class="single__close"
+      routerLink="/portfolio"
+      aria-label="fermer le projet"
+    >
       <svg
         width="357px"
         height="357px"

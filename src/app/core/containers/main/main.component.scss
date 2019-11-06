@@ -1,18 +1,18 @@
 @import 'src/stylesheets/variables';
 
 .main {
+  $profil_w: 260px;
   max-width: 1300px;
   margin: 0 auto;
 
   &__profil {
-    width: 260px;
+    width: $profil_w;
     position: fixed;
     padding: 10px 10px 10px 10px;
   }
 
   &__content {
-    margin: 10px 10px 10px 260px;
+    margin: 10px calc(10px * 2) 10px calc(#{$profil_w} + (10px * 2));
     min-height: 100vh;
-    // background-color: red;
   }
 }
