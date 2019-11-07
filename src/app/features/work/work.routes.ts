@@ -7,11 +7,13 @@ import * as fromContainers from './containers';
 const routes: Routes = [
   {
     path: '',
-    component: fromContainers.WorkComponent
-  },
-  {
-    path: ':slug',
-    component: fromContainers.SingleComponent
+    component: fromContainers.WorkComponent,
+    children: [
+      {
+        path: ':slug',
+        component: fromContainers.SingleComponent
+      }
+    ]
   }
 ];
 

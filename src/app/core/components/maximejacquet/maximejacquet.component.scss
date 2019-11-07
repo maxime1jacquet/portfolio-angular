@@ -4,9 +4,11 @@
   position: relative;
 
   &__img {
-    margin-bottom: 10px;
-    max-width: 100%;
+    width: 50%;
+    height: 50%;
     border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 
   &__name {
@@ -29,6 +31,7 @@
 
     a {
       color: $pomegranate;
+      margin-right: 10px;
     }
   }
 }

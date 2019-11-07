@@ -13,6 +13,7 @@ import { reducers, effects } from './store';
 import * as fromComponents from './components';
 import * as fromContainers from './containers';
 import * as fromServices from './services';
+import { SanitizeCssPipe } from './pipes/sanitizeCss.pipe';
 
 @NgModule({
   imports: [
@@ -23,7 +24,11 @@ import * as fromServices from './services';
     StoreModule.forFeature('work', reducers),
     EffectsModule.forFeature(effects)
   ],
-  declarations: [...fromComponents.components, ...fromContainers.components],
+  declarations: [
+    ...fromComponents.components,
+    ...fromContainers.components,
+    SanitizeCssPipe
+  ],
   providers: [...fromServices.services]
 })
 export class WorkModule {}

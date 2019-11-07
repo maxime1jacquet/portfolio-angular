@@ -1,5 +1,6 @@
 <a
   class="item"
+  [class.active]="active"
   tabindex="0"
   (click)="routerLink('/portfolio/' + data.slug)"
   (keyup.enter)="routerLink('/portfolio/' + data.slug)"
@@ -12,7 +13,7 @@
     alt=""
   />
 
-  <!-- <h2 class="item__title" *ngIf="data && data.title">{{ data.title }}</h2> -->
+  <h2 class="item__title" *ngIf="data && data.title">{{ data.title }}</h2>
   <!-- <div class="item__date" *ngIf="data && data.date">
     <span>{{ dateSplit[0] }}</span>
     <div></div>

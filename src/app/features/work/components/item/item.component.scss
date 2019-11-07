@@ -2,97 +2,41 @@
 
 .item {
   $root: &;
-  outline: none;
   display: flex;
-  padding: 10px 0;
-  margin-right: 20px;
   position: relative;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  outline: none;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 
   &__image {
-    max-height: 400px;
+    height: 700px;
     width: auto;
     border-radius: 10px;
   }
 
-  // align-items: flex-start;
-  // // background-color: $black;
-  // border-bottom: 1px solid $grey;
-  // cursor: pointer;
-  // flex-direction: column;
-  // height: 100%;
-  // justify-content: center;
-  // outline: none;
-  // overflow: hidden;
-  // text-decoration: none;
-  // transition: transform 800ms ease-out;
-  // width: 100%;
+  &__title {
+    color: $white;
+    font-size: 30px;
+    position: relative;
+    transition: all 300ms ease-out;
+    bottom: 20%;
+    right: 10%;
+    position: absolute;
+    background-color: $black;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 
-  // @media screen and(min-width:#{$breakpoint}) {
-  //   &:hover,
-  //   &:focus {
-  //     #{$root}__title {
-  //       transform: translateX(30px);
-  //     }
-  //     #{$root}__date {
-  //       transform: translateX(30px);
-  //     }
-  //     #{$root}__tag {
-  //       transform: translateX(20px);
-  //     }
-  //   }
-  // }
+    transition: all 300ms ease-out;
+    transform: translateX(-50px);
+    opacity: 0;
+  }
 
-  // &.current {
-  //   transform: scale(7);
-  //   transition-delay: 400ms;
-  //   z-index: $z-slide;
-  //   border-top: 2px solid $black;
-
-  //   #{$root}__title {
-  //     opacity: 0;
-  //     transform: translateX(80px);
-  //     transition-delay: 100ms;
-  //   }
-  //   #{$root}__date {
-  //     opacity: 0;
-  //     transform: translateX(80px);
-  //   }
-  //   #{$root}__tag {
-  //     opacity: 0;
-  //     transform: translateX(80px);
-  //   }
-  // }
-
-  // @media screen and(max-width:#{$breakpoint}) {
-  //   padding: 20px 0;
-  // }
-
-  // &__title {
-  //   color: $black;
-  //   font-size: 30px;
-  //   position: relative;
-  //   transition: all 300ms ease-out;
-
-  //   @media screen and(max-width:#{$breakpoint}) {
-  //     font-size: 18px;
-  //   }
-  // }
-
-  // &__date {
-  //   padding-top: 10px;
-  //   color: $grey;
-  //   display: flex;
-  //   transition: all 300ms ease-out;
-
-  //   div {
-  //     border-bottom: 1px solid $grey;
-  //     height: 9px;
-  //     margin: 0 10px;
-  //     transition: all 300ms ease-out;
-  //     width: 50px;
-  //   }
-  // }
+  &.active {
+    #{$root}__title {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }

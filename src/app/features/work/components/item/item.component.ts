@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
-  @Input() index: number;
+  @Input() active: boolean;
   @Input() data: fromModel.Work;
 
   public dateSplit: Array<string>;
