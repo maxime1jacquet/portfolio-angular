@@ -29,12 +29,12 @@ export class ItemComponent implements OnInit {
     }
   }
 
-  public routerLink(slug: string) {
-    this.current = true;
+  // public routerLink(slug: string) {
+  //   this.current = true;
 
-    setTimeout(() => {
-      this.router.navigate([slug]);
-      this.current = false;
-    }, 600);
-  }
+  //   setTimeout(() => {
+  //     this.router.navigate([slug]);
+  //     this.current = false;
+  //   }, 600);
+  // }
 }

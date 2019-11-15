@@ -7,9 +7,9 @@
     ></div>
 
     <div class="portfolio__link" *ngIf="item.type == 'site'">
-      <a [href]="item.url" target="_blank" class="portfolio__button">{{
-        item.label
-      }}</a>
+      <a [href]="item.url" target="_blank" class="portfolio__button">
+        {{ item.label }}
+      </a>
     </div>
 
     <div class="portfolio__image" *ngIf="item.type == 'image'">

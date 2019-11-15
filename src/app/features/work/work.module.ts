@@ -14,7 +14,7 @@ import * as fromComponents from './components';
 import * as fromContainers from './containers';
 import * as fromServices from './services';
 import { SanitizeCssPipe } from './pipes/sanitizeCss.pipe';
-
+import { NgxParallaxModule } from '@yoozly/ngx-parallax';
 @NgModule({
   imports: [
     CommonModule,
@@ -22,7 +22,8 @@ import { SanitizeCssPipe } from './pipes/sanitizeCss.pipe';
     RouterModule,
     WorkRoutingModule,
     StoreModule.forFeature('work', reducers),
-    EffectsModule.forFeature(effects)
+    EffectsModule.forFeature(effects),
+    NgxParallaxModule
   ],
   declarations: [
     ...fromComponents.components,

@@ -1,22 +1,19 @@
+<!-- tabindex="0" -->
 <a
   class="item"
   [class.active]="active"
-  tabindex="0"
-  (click)="routerLink('/portfolio/' + data.slug)"
-  (keyup.enter)="routerLink('/portfolio/' + data.slug)"
   [class.current]="current"
   [attr.aria-label]="'Voir le projet ' + data.title"
+  routerLinkActive="current"
+  [routerLink]="'/portfolio/' + data.slug"
 >
   <img
+    ngx-parallax
+    [speed]="30"
     class="item__image"
     [attr.src]="endpoint + '/' + data.slug + '/' + data.image"
     alt=""
   />
 
   <h2 class="item__title" *ngIf="data && data.title">{{ data.title }}</h2>
-  <!-- <div class="item__date" *ngIf="data && data.date">
-    <span>{{ dateSplit[0] }}</span>
-    <div></div>
-    <span>{{ dateSplit[1] }}</span>
-  </div> -->
 </a>
