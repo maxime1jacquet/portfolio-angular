@@ -21,6 +21,8 @@ import * as fromComponents from './components';
 import * as fromContainers from './containers';
 import * as fromModels from './models';
 
+import { NgxCursorModule } from '../../../projects/ngx-cursor/src/lib/ngx-cursor.module';
+
 export const metaReducers: MetaReducer<
   fromModels.AppcoreState
 >[] = !environment.production ? [storeFreeze] : [];
@@ -35,6 +37,7 @@ export const metaReducers: MetaReducer<
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot(effects),
     StoreRouterConnectingModule.forRoot(),
+    NgxCursorModule,
     !environment.production
       ? StoreDevtoolsModule.instrument({ maxAge: 50 })
       : []
