@@ -7,7 +7,10 @@
     "activityBarBadge.foreground": "#e7e7e7",
     "statusBar.background": "#0d39b6",
     "statusBarItem.hoverBackground": "#1048e6",
-    "statusBar.foreground": "#e7e7e7"
+    "statusBar.foreground": "#e7e7e7",
+    "activityBar.activeBackground": "#1048e6",
+    "activityBar.activeBorder": "#59061c",
+    "statusBar.border": "#0d39b6"
   },
   "peacock.color": "#0d39b6"
 }
