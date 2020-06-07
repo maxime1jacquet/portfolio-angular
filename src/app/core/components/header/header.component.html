@@ -4,13 +4,15 @@
   (click)="openMenu()"
   [class.is-active]="isMenuOpen"
   aria-label="Open menu"
+  cursor-active
+  cursor-menu
 >
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
 </button>
 
-<header class="header" role="navigation">
+<header class="header" role="navigation" cursor-color="#FFF">
   <ul (click)="openMenu()">
     <li
       (mouseenter)="loadPage('/work')"

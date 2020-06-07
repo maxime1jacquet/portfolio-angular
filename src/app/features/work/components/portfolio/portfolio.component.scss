@@ -1,4 +1,4 @@
-@import "../../../../../stylesheets/variables";
+@import '../../../../../stylesheets/variables';
 
 .portfolio {
   &__item {
@@ -21,7 +21,7 @@
     border-radius: 0;
     border: 0px;
     color: $black;
-    cursor: pointer;
+    // cursor: pointer;
     font-size: 12px;
     height: 40px;
     margin-top: $marge;
@@ -37,7 +37,7 @@
     }
 
     &::before {
-      content: ">";
+      content: '>';
       position: absolute;
       left: 10px;
       top: 10px;

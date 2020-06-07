@@ -6,7 +6,11 @@
       [innerHTML]="item.texte"
     ></div>
 
-    <div class="portfolio__link" *ngIf="item.type == 'site'">
+    <div
+      class="portfolio__link"
+      *ngIf="item.type == 'site'"
+      cursor-color="#FFF"
+    >
       <a [href]="item.url" target="_blank" class="portfolio__button">{{
         item.label
       }}</a>

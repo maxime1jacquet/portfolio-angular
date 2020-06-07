@@ -50,7 +50,7 @@
       &:hover,
       &:focus,
       &.active {
-        cursor: pointer;
+        // cursor: pointer;
         text-decoration: underline;
       }
     }
@@ -68,6 +68,7 @@
   position: fixed;
   top: $marge-menu;
   z-index: $z-nav-btn;
+  cursor: none;
 
   &::before {
     position: absolute;
@@ -91,5 +92,9 @@
   @media screen and(max-width:#{$breakpoint}) {
     left: $marge-menu-small;
     top: $marge-menu-small;
+  }
+
+  span {
+    pointer-events: none;
   }
 }

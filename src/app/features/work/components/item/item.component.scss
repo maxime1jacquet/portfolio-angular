@@ -5,7 +5,7 @@
   align-items: flex-start;
   background-color: $black;
   border-top: 2px solid $grey;
-  cursor: pointer;
+  // cursor: pointer;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -19,17 +19,17 @@
   width: 100%;
 
   @media screen and(min-width:#{$breakpoint}) {
-    &:hover,
-    &:focus {
+    cursor: none;
+    &:hover {
       #{$root}__title {
-        transform: translateX(30px);
+        color: $white;
       }
-      #{$root}__date {
-        transform: translateX(30px);
-      }
-      #{$root}__tag {
-        transform: translateX(20px);
-      }
+      //     #{$root}__date {
+      //       transform: translateX(30px);
+      //     }
+      //     #{$root}__tag {
+      //       transform: translateX(20px);
+      //     }
     }
   }
 
@@ -63,6 +63,7 @@
     font-size: 30px;
     position: relative;
     transition: all 300ms ease-out;
+    // z-index: 1100;
 
     @media screen and(max-width:#{$breakpoint}) {
       font-size: 18px;

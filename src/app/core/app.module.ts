@@ -10,7 +10,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { storeFreeze } from 'ngrx-store-freeze';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
-// import { NgxCursorModule } from 'ngx-cursor';
+import { NgxCursorModule } from 'ngx-cursor';
 
 import { reducers, effects } from './store';
 import { AppRoutingModule } from './app.routes';
@@ -29,7 +29,7 @@ export const metaReducers: MetaReducer<
   imports: [
     HttpClientModule,
     AppRoutingModule,
-    // NgxCursorModule,
+    NgxCursorModule,
     BrowserModule.withServerTransition({ appId: 'maximejacquet' }),
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot(effects),

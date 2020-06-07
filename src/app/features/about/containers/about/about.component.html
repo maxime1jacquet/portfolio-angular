@@ -11,14 +11,19 @@
   </div>
 
   <div>
-    <button class="about__button button" (click)="openExp()">
+    <button
+      class="about__button button"
+      (click)="openExp()"
+      cursor-active
+      cursor-color="#FFF"
+    >
       <span *ngIf="idOpenExp">-</span>
       <span *ngIf="!idOpenExp">+</span>
       d'expériences
     </button>
   </div>
 
-  <div class="about__img">
+  <div class="about__img" cursor-color="transparent">
     <img
       tabindex="0"
       src="/assets/imgs/profil.jpg"

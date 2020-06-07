@@ -63,7 +63,9 @@
 
     &:hover,
     &:focus {
+      cursor: none;
       svg {
+        pointer-events: none;
         fill: $white;
         transform: scale(1.2);
       }
