@@ -1,0 +1,25 @@
+dev:
+  scheme: "ftp"
+  host: "my-host"
+  check: true
+  user: "my-user"
+  pass: "my-pass"
+  port: 21
+  slots: 10
+  path:
+    local: "html/"
+    remote: "my-sub-domain.maximejacquet.fr/"
+  # include:
+  #   "style.css": ""
+  #   "script.js": ""
+  # exclude:
+  #   [
+  #     ".gitignore",
+  #     "dploy.yaml",
+  #     "application/javascripts/**/*.js",
+  #     "application/stylesheets/**/*.scss",
+  #     "application/bower.json",
+  #     "application/gulpfile.js",
+  #     "application/package.json",
+  #     "application/README.md",
+  #   ]
