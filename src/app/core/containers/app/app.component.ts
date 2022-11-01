@@ -20,6 +20,7 @@ import * as fromModel from '../../models';
 export class AppComponent implements OnInit {
   public menuState$: Observable<fromModel.MenuState>;
   public title$: Observable<fromModel.TitleState>;
+  public isLarge: boolean = false;
 
   constructor(private store: Store<fromModel.AppcoreState>) {}
 
@@ -27,6 +28,8 @@ export class AppComponent implements OnInit {
     this.store.dispatch(new fromStore.LoadTitle());
     this.menuState$ = this.store.select(fromStore.getMenuState);
     this.title$ = this.store.select(fromStore.getTitleState);
+    this.isLarge =
+      window.innerWidth > window.innerHeight && window.innerWidth > 1024;
   }
 
   public openMenu(): void {

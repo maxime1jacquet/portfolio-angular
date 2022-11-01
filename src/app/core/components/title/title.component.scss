@@ -1,23 +1,35 @@
 @import "../../../../stylesheets/variables";
 
 .title {
-  margin: 0 auto;
+  margin: 50px auto;
   max-width: $max-width;
   position: relative;
   z-index: $z-title;
 
+  @media screen and(max-width:#{$breakpoint}) {
+    margin: 20px auto;
+  }
+
   h1 {
     color: $denim;
-    font-size: 35px;
+    font-size: 50px;
     display: inline-block;
     width: auto;
     margin-bottom: $marge;
     position: relative;
     text-decoration: underline;
 
+    display: flex;
+    align-items: center;
+    img{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
     @media screen and(max-width:#{$breakpoint}) {
       font-size: 30px;
-      margin-top: 10px;
     }
   }
 

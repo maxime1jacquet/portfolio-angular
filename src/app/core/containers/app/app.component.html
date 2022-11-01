@@ -16,16 +16,17 @@
       <div class="app__content">
         <app-title [title]="title"></app-title>
         <router-outlet #outlet="outlet"></router-outlet>
-        <app-footer></app-footer>
+        <!-- <app-footer></app-footer> -->
       </div>
     </main>
   </div>
 </div>
 
 <ngx-cursor
+  *ngIf="isLarge"
   color="#1048e6"
   [delay]="40"
-  [selectors]="['view', 'close', 'menu']"
-  [words]="['voir', 'fermer', 'menu']"
+  [selectors]="['view', 'close']"
+  [words]="['voir', 'fermer']"
   [cursor]="false"
 ></ngx-cursor>

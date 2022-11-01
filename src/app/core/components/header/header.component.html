@@ -5,7 +5,7 @@
   [class.is-active]="isMenuOpen"
   aria-label="Open menu"
   cursor-active
-  cursor-menu
+  cursor-color="#FFF"
 >
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
@@ -24,7 +24,7 @@
       Portfolio
     </li>
     <li class="limit">/</li>
-    <li
+    <!-- <li
       (mouseenter)="loadPage('/about')"
       (keyup.enter)="loadPage('/about')"
       routerLink="/about"
@@ -33,7 +33,7 @@
     >
       À propos
     </li>
-    <li class="limit">/</li>
+    <li class="limit">/</li> -->
     <li
       (mouseenter)="loadPage('/contact')"
       (keyup.enter)="loadPage('/contact')"

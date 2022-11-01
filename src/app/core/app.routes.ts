@@ -10,17 +10,17 @@ const routes: Routes = [
   {
     path: 'work',
     loadChildren: () =>
-      import('../features/work/work.module').then(m => m.WorkModule)
+      import('../features/work/work.module').then((m) => m.WorkModule)
   },
-  {
-    path: 'about',
-    loadChildren: () =>
-      import('../features/about/about.module').then(m => m.AboutModule)
-  },
+  // {
+  //   path: 'about',
+  //   loadChildren: () =>
+  //     import('../features/about/about.module').then(m => m.AboutModule)
+  // },
   {
     path: 'contact',
     loadChildren: () =>
-      import('../features/contact/contact.module').then(m => m.ContactModule)
+      import('../features/contact/contact.module').then((m) => m.ContactModule)
   },
   {
     path: '**',
